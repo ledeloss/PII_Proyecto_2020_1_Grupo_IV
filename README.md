@@ -38,21 +38,21 @@ Cada entrega es una parte del proyecto que construye sobre la anterior. Al final
 
 La estructura del trabajo en el proyecto será la siguiente:
 
-> [X] **Kick-off**
+- [x] **Kick-off**
 
-> [ ] **Presentación de Propuestas**
+- [ ] **Presentación de Propuestas**
 
-> [ ] **Evaluación docente de propuestas**
+- [ ] **Evaluación docente de propuestas**
 
-> [ ] **Lanzamiento de proyectos**
+- [ ] **Lanzamiento de proyectos**
 
-> [ ] **Primer Entrega**
+- [ ] **Primer Entrega**
 
-> [ ] **Segunda Entrega**
+- [ ] **Segunda Entrega**
 
-> [ ] **Entrega Final**
+- [ ] **Entrega Final**
 
-> [ ] **Defensa**
+- [ ] **Defensa**
 
 
 ## Propuestas
