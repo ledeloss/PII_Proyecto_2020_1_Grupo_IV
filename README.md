@@ -31,6 +31,21 @@ Los chatbots son especialmente útiles para asistir a las personas en tareas o c
 
 - y mucho más <sup>2</sup>.
 
+Algunas de las aplicaciones más conocidas que abren sus puertas al desarrollo de chatbots (tienen APIs) son:
+
+- Telegram
+
+- Messenger
+
+- Whatsapp
+
+- Slack
+
+- Discord (la que usamos en clase)
+
+- entre otras.
+
+Y nos integraremos al menos a una de ellas.
 
 ## Roadmap
 
