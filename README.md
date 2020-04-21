@@ -7,6 +7,8 @@
 
 Este semester, desarrollaremos... chatbots! 🤖
 
+![Robotina](https://media.giphy.com/media/xT8qAXwz4AnRkL9eRa/giphy.gif)
+
 Un chatbot (o bot conversacional) es «un programa que simula mantener una conversación con una persona al proveer respuestas automáticas a entradas hechas por el usuario.»<sup>1</sup>
 
 Existen gran variedad de chatbots actualmente, y varios _sabores_. Hay chatbots que simplemente responden a comandos pre-establecidos, y otros que integran algoritmos de [inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial) para procesar los mensajes de los usuarios e [interpretar lo que se está diciendo](https://es.wikipedia.org/wiki/Procesamiento_de_lenguajes_naturales).
