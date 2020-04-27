@@ -32,7 +32,7 @@ Las cartas _a completar_ del juego donde las cartas son:
 
 - Fotos, por ejemplo, memes sin texto, como este:
 
-![MEME](./Assets.meme.png)
+![MEME](./Assets/meme.png)
 
 #### Bot
 
