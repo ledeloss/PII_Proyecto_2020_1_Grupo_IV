@@ -59,7 +59,7 @@ La estructura del trabajo en el proyecto será la siguiente:
 
 - [x] **Presentación de Propuestas**
 
-- [ ] **Evaluación docente de propuestas**
+- [x] **Evaluación docente de propuestas**
 
 - [ ] **Lanzamiento de proyectos**
 
