@@ -35,7 +35,7 @@ Todos los entregables que sean de documentación (diagramas, tarjetas, documento
 
 Los proyectos de código fuente deberán crearse dentro del directorio `src` (como es habitual).
 
-Deberá existir ademas un archivo README.md en la raiz del repositorio para incluír las notas del equipo. Véase [Notas](#notas)
+Deberá existir ademas un archivo README.md en la raiz del repositorio para incluír las notas del equipo. Véase [Notas](#notas).
 
 ## Entregables
 
