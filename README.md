@@ -61,7 +61,7 @@ La estructura del trabajo en el proyecto será la siguiente:
 
 - [x] **Evaluación docente de propuestas**
 
-- [ ] **Lanzamiento de proyectos**
+- [x] **Lanzamiento de proyectos**
 
 - [ ] **Primer Entrega**
 
@@ -114,6 +114,19 @@ Cada entrega será acompañada además de una tarea de evaluación entre pares (
 | Entrega Final <sup>3</sup> | 2 de Julio |
 | Defensa | 3 de Julio |
 | | |
+
+**EDIT**:
+### Asignación de Bots
+
+Los Bots quedaron asignados de la siguiente manera:
+
+| Equipo | Bot |
+| --- | --- |
+| Equipo 1 | [Bot III](https://github.com/ucudal/PII_Proyecto_2020_1_Letra/blob/master/Bot_III.md) |
+| Equipo 2 | [Bot V](https://github.com/ucudal/PII_Proyecto_2020_1_Letra/blob/master/Bot_V.md) |
+| Equipo 3 | [Bot II](https://github.com/ucudal/PII_Proyecto_2020_1_Letra/blob/master/Bot_II.md) |
+| Equipo 4 | [Bot IV](https://github.com/ucudal/PII_Proyecto_2020_1_Letra/blob/master/Bot_IV.md) |
+| Equipo 5 | [Bot I](https://github.com/ucudal/PII_Proyecto_2020_1_Letra/blob/master/Bot_I.md) |
 
 *******
 
