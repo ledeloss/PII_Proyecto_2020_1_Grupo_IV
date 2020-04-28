@@ -44,7 +44,7 @@ El bot debe poder ser utilizado por consola y desde otras plataformas de chat (p
 
 ### Completitud de la Consigna
 
-Esta consigna es parcialmente completa. Naturalmente, durante el desarrollo del proyecto surgirán interrogantes sobre la especificación del bot. Dichas consultas serán evacuadas por el _product owner_ de este proyecto: Eduardo Pérez.
+Esta consigna es parcialmente completa. Naturalmente, durante el desarrollo del proyecto surgirán interrogantes sobre la especificación del bot. Dichas consultas serán evacuadas por el _product owner_ de este proyecto: Juan Sapriza.
 
 
 ----
