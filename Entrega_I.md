@@ -45,7 +45,7 @@ Deberá existir ademas un archivo README.md en la raiz del repositorio para incl
 - **Diagrama de clases** (UML simple) con las clases del modelo identificadas
   - Formato: png, jpg, jpeg, pdf, html o markdown.
 
-- **Proyecto de C#** siguiente la estructura de proyectos del curso, incluyendo las clases del modelo identificadas y sus colaboraciones. En esta instancia no es necesario agregar comportamiento más allá del mínimo indispensable para reflejar las colaboraciones.
+- **Proyecto de C#** siguiendo la estructura de proyectos del curso, incluyendo las clases del modelo identificadas y sus colaboraciones. En esta instancia no es necesario agregar comportamiento más allá del mínimo indispensable para reflejar las colaboraciones.
 
 ## Fecha de entrega
 
