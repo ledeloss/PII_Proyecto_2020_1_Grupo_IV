@@ -10,6 +10,6 @@ utilizando asi reutilización de código
     public interface IPlataforma
     {
         string RecibirMensaje();
-        void EnviarMensaje();
+        void EnviarMensaje(string mensaje);
     }
 }

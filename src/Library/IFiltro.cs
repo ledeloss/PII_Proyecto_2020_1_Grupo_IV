@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace Library
 {
 
@@ -9,10 +10,11 @@ utilizando asi reutilización de código
 */
     public interface IFiltro
     {
-        public List<> interes;
+        List<string> interes { get; set; } 
         int PrecioMin { get; set; }
         int PrecioMax { get; set; }
         string Genero { get; set; }
         int Edad { get; set; }
+        void GenerarFiltro();
     }
 }
