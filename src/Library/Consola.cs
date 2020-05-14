@@ -5,6 +5,7 @@ namespace Library
 {
 
 /* Alternativa de comunicación con el usuario, para interactuar con el bot mediante la consola
+    Implementa a IPlataforma para identificar 
 */
     public class Consola : IPlataforma
     {

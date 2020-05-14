@@ -5,8 +5,8 @@ using System.Collections.Generic;
 namespace Library
 {
 
-/* Interfase que sera el molde con los atributos de los diferentes filtros para llegar al regalo deseado, que la implementaran
-utilizando asi reutilización de código
+/* Interfase que sera el molde con los atributos de los diferentes filtros para llegar al regalo deseado, 
+luego sera implementada y alli estariamos utilizando reutilización de código
 */
     public interface IFiltro
     {
