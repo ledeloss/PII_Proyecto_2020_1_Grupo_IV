@@ -15,9 +15,9 @@ namespace Library
 
         }
 
-         public void FiltrarSugerencias(List <Regalo> regalos)
+         public List <Regalo> FiltrarSugerencias(List <Regalo> regalos)
         {
-
+            return new List<Regalo>();
         }
     }
 }

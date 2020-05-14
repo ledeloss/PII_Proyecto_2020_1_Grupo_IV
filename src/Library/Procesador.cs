@@ -4,17 +4,23 @@ using System.Collections.Generic;
 namespace Library
 {
 
-/* Clase que procesa los mensajes, genera los filtros
-*/
+    /* Clase que se encarga de procesar los mensajes con el Usuario, revisa las reglas configuradas 
+    para saber los tipos de interacciones esperados, tambien genera los filtros
+    */
     public class Procesador
     {
 
-        public bool ValidarMensaje()
+        public bool ValidarMensaje ()
+        {
+            return true;
+        }
+
+        void GenerarFiltro ()
         {
 
         }
 
-        void GenerarFiltro()
+        void InterpretarInteraccion ()
         {
 
         }
