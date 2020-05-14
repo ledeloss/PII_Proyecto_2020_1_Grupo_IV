@@ -11,10 +11,15 @@ namespace Library
 
         public bool ValidarMensaje()
         {
-
+            return true;
         }
 
         void GenerarFiltro()
+        {
+
+        }
+        
+        void InterpretarInteraccion()
         {
 
         }

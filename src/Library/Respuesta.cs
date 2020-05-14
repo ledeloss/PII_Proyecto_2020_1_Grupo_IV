@@ -10,7 +10,7 @@ namespace Library
     {
         public String GenerarRespuesta (string TipoInteraccion)
         {
-
+            return "";
         }
     }
 }

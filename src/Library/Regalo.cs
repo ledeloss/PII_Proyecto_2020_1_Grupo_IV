@@ -6,7 +6,7 @@ namespace Library
 
 /* Clase que realiza la busqueda en las tiendas con los filtros proporcionados, por esto implementa IFiltro e ITienda
 */
-    public class Regalo: IFiltro, ITienda
+    public class Regalo
     {
         string nombre;
         int precio; 
@@ -20,7 +20,7 @@ de hacerlo porque tiene toda la información disponible para ello y es su respon
 */
         public string DeRegaloaTexto()
         {
-
+            return "";
         }
     }
 }

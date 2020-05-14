@@ -8,11 +8,11 @@ namespace Library
 utilizando asi reutilización de código
 */
 
-    public interface IManejadorArchivos
+    public interface ManejadorArchivos
     {
         String LeerArchivo(string archivo);
         void GenerarArchivo();
-        void EscribeArchivo();
+        void ModificarArchivo();
         void EliminarArchivo();
     }
 }
