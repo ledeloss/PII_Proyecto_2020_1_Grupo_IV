@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace Library
 {
 
-/* Interfase que sera el molde para las diferentes API que utilizaremos, que la implementaran
-utilizando asi reutilización de código
+/* Alternativa de comunicación con el usuario, para interactuar con el bot mediante la consola
 */
     public class Consola : IPlataforma
     {
@@ -13,7 +12,9 @@ utilizando asi reutilización de código
        {
            return "";
        }
-        public void EnviarMensaje()
-        {}
+        public void EnviarMensaje(string mensaje)
+        {
+            Console.WriteLine(mensaje);
+        }
     }
 }

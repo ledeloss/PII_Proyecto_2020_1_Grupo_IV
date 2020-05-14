@@ -13,7 +13,7 @@ utilizando asi reutilización de código
        {
            return "";
        }
-        public void EnviarMensaje()
+        public void EnviarMensaje(string mensaje)
         {}
 /* Pretendemos utilizar Singleton aqui para crear instancias unicas de las APIs
 */

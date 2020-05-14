@@ -8,11 +8,14 @@ namespace Library
 utilizando asi reutilización de código
 */
 
-    public interface ManejadorArchivos
+    public class ManejadorArchivos
     {
-        String LeerArchivo(string archivo);
-        void GenerarArchivo();
-        void ModificarArchivo();
-        void EliminarArchivo();
+        protected virtual String LeerArchivo(string archivo)
+        {
+            return "";
+        }
+        public virtual void GenerarArchivo(){}
+        public virtual void ModificarArchivo(){}
+        public virtual void EliminarArchivo(){}
     }
 }
