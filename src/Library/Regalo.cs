@@ -8,11 +8,11 @@ namespace Library
 */
     public class Regalo
     {
-        string nombre;
-        int precio; 
-        string descripcion;
-        string URL;
-        string imagen;
+        public string Nombre { get; set; }
+        public int Precio{ get; set; } 
+        public string Descripcion{ get; set; }
+        public string Url{ get; set; }
+        public string Imagen{ get; set; }
 
 
 /* Aplicamos patrón Experto, ya que el dueño de los datos que es regalo devuelve el regalo en forma de texto y es el encargado 
