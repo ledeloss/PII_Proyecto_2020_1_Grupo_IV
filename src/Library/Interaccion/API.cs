@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Library
 {
 
-    /* Interfase que sera el molde para las diferentes API que utilizaremos, que la implementaran
+    /* Interfase que sera el molde para las diferentes API que utilizaremos, las cuales la implementaran
     utilizando asi reutilización de código.
     */
     public class API : IPlataforma

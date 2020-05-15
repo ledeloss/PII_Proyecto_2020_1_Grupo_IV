@@ -5,7 +5,7 @@ namespace Library
         /*
         Clase que brinda las funcionalidades de mensajeria de la Aplicacion Telegram.
         Funciona en modo Singleton, para garantizar un único acceso al sitio.
-        La misma va a ser suministrada por los Profesores.
+        Se espera que dicha clase sea suministrada por los Profesores.
         */
     }
 }
