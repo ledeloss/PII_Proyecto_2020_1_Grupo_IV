@@ -2,14 +2,19 @@ using System.Collections.Generic;
 
 namespace Library
 {
+    /*
+    Implemenacion de interface ITienda, por definicion esta obligado a Implementar todos los metodos
+    definidos en ITienda
+     */
+
     public class Amazon : ITienda
     {
-        public List<Regalo> GenerarListaRegalos(IFiltro filtro)
+        public List<Regalo> GenerarListaRegalos (IFiltro filtro)
         {
-            return new List<Regalo>();
+            return new List<Regalo> ();
         }
 
-        public void InstanciarApiTienda()
+        public void InstanciarApiTienda ()
         {
             /*
             Aplicando el patrón Creator, la clase Amazon es la encargada de crear la instancia de API necesaria
