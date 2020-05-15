@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Library
 {
 
-    /* Clase la cual por medio de Herencia se podra servira de molde para manejar los archivos con los cuales trabajemos tanto para guardar información como para manipularla
+    /* Clase la cual por medio de Herencia  servira de molde para manejar los archivos con los cuales trabajemos tanto para guardar información como para manipularla
     utilizando asi reutilización de código.
     */
 
@@ -14,11 +14,11 @@ namespace Library
         {
             return "";
         }
-        public virtual void GenerarArchivo ()
+        public virtual void GenerarArchivo ( string nombre, string contenido)
         { }
-        public virtual void ModificarArchivo ()
+        public virtual void ModificarArchivo ( string nombre, string contenido)
         { }
-        public virtual void EliminarArchivo ()
+        public virtual void EliminarArchivo (string archivo)
         { }
     }
 }

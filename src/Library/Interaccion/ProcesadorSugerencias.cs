@@ -4,7 +4,8 @@ using System.Collections.Generic;
 namespace Library
 {
 
-    /* Clase que realiza un ordenamiento y procesamiento de las sugerencias
+    /* 
+    Clase que realiza un ordenamiento y procesamiento de las sugerencias
      */
     public class ProcesadorSugerencias
     {

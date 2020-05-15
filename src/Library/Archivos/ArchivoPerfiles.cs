@@ -7,7 +7,7 @@ namespace Library
     public class ArchivoPerfiles : ManejadorArchivos
     {
         /*
-        Esta clase maneja los archivos que contengan perfiles de usuarios estándares, para complementar los filtros
+        Esta clase maneja los archivos que contengan perfiles de usuarios estándares para complementar los filtros
         */
 
     }

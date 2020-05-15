@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    /*Dado que cada tienda puede tener parámetros distintos para filtrar sus publicaciones, por SRP, generamos clases
-    individuales para que la única razón de cambio de la clase sea que cambia el sistema de filtrado de la
-    página a la que brindan acceso.
+    /*Dado que cada tienda puede tener parámetros distintos para filtrar sus publicaciones, por SRP, 
+    generamos clases individuales para que la única razón de cambio de la clase sea que cambia el 
+    sistema de filtrado de la página a la que brindan acceso.
     */
     public class FiltroML : IFiltro
     {

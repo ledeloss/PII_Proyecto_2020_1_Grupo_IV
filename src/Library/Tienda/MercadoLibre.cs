@@ -3,8 +3,9 @@ using System.Collections.Generic;
 namespace Library
 {
     /*
-    Se implementa una ITienda, en ese caso utilizando MercadoLibre para procesar el resultado de la comunicacion
-    con APi de MercadoLibre. Nos interesa obtener de esa Tienda una Lista de objetos Regalo.
+    Se implementa una ITienda,por definicion esta obligado a Implementar todos los metodos
+    definidos en ITienda en este caso utilizando Amazon para procesar el resultado de la comunicacion
+    con la APi de MercadoLibre. Nos interesa obtener de esa Tienda una Lista de objetos Regalo.
       */
     public class MercadoLibre : ITienda
     {
