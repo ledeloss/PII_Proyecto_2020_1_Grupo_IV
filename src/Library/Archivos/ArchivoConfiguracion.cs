@@ -7,7 +7,7 @@ namespace Library
     public class ArchivoConfiguracion : ManejadorArchivos
     {
         /*
-        Esta clase se encarga de manejar los archivos que tengan los parámetros configurables que manejan el bot
+        Esta clase se encarga de manejar los archivos que tengan los parámetros configurables que utiliza el bot
         */
 
     }

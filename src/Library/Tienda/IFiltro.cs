@@ -5,7 +5,8 @@ namespace Library
 {
 
     /* Interfase que sera el molde con los atributos de los diferentes filtros para llegar al regalo deseado, 
-    luego sera implementada por un Filtro especifico de una Tienda y alli estariamos utilizando reutilización de código.
+    luego sera implementada por un Filtro especifico de una Tienda y alli estariamos utilizando reutilización
+    de código.
     */
     public interface IFiltro
     {

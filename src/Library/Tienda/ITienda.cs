@@ -17,9 +17,10 @@ namespace Library
 
         /*
             Identificamos Composicion - Delegacion - y Singleton aqui:
-            Mediante este metodo de instanciarApiTienda() , crearemos intancias unicas por ejemplo de MercadoLibre (utilizando Singleton) y observamos
-            que esta clase es una clase Compuesta, el componente es la clase en que vamos a Delegar la responsabilidad de 
-            conocer como es el funcionamiento de Mercado Libre.
+            Mediante este metodo de instanciarApiTienda() , crearemos intancias unicas por ejemplo de 
+            MercadoLibre (utilizando Singleton) y observamos que esta clase es una clase Compuesta, 
+            el componente es la clase en que vamos a Delegar la responsabilidad de conocer como es
+            el funcionamiento de Mercado Libre.
          */
         void InstanciarApiTienda ();
 
