@@ -1,3 +1,4 @@
+using System;
 namespace Library
 {
     /*Para respetar el principio de SRP,Se le asigna a estas clases una unica responsabilidad,y razon de cambio.
@@ -9,6 +10,13 @@ namespace Library
         /*
         Esta clase maneja los archivos que contengan interacciones preestablecidas
         */
+
+        public string GetInteraccion (string tipoInteraccion)
+        {
+            string path = $"\\..\\..\\..\\Interacciones\\{tipoInteraccion}.txt";
+            return this.LeerLineaAleatoria (path);
+
+        }
 
     }
 }
