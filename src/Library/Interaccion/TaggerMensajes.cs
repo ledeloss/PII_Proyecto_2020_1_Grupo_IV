@@ -17,6 +17,10 @@ namespace Library
         /// </summary>
         /// <returns>Objeto Mensaje (contiene el contenido original del mensaje en un string, las frases clave 
         /// en una lista de strings y un campo de TipoMensaje.</returns>
+        /// 
+        //Aplicamos patrón Creator porque TaggerMensajes contiene los datos que serán provistos para
+        //inicializar instancias de Mensaje, y tiene un método que devuelve objetos del tipo Mensaje 
+        //(TaggerMensajes usa de forma muy cercana objetos Mensaje)
         public Mensaje EtiquetarMensaje()
         {
             string cont = procesador.getContenido();
@@ -48,8 +52,7 @@ namespace Library
                 {
                     etiqueta = interacciones.BuscarEtiqueta(clave);
                 }
-            } 
-            //
+            }
             Mensaje mensaje = new Mensaje(cont, etiqueta, claves);
             return mensaje;
         }
