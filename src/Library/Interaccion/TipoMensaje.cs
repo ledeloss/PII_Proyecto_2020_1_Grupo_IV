@@ -1,9 +1,12 @@
-public enum TipoMensaje
+namespace Library
 {
-    Numero,
-    Genero,
-    Interes,
-    Despedida,
-    Positivo,
-    Negativo
+    public enum TipoMensaje
+    {
+        Numero,
+        Genero,
+        Interes,
+        Despedida,
+        Positivo,
+        Negativo
+    }
 }
