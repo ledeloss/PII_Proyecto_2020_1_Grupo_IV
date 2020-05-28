@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FIT\\repos\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\FIT\\repos\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+      "projectPath": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
       "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FIT\\repos\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
+      "outputPath": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
