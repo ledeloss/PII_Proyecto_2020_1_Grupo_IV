@@ -7,6 +7,7 @@ namespace Library
         Interes,
         Despedida,
         Positivo,
-        Negativo
+        Negativo,
+        Otros
     }
 }
