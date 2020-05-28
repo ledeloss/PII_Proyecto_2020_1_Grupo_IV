@@ -4,25 +4,33 @@ namespace Library
 {
  class Controlador : IMediador
     {
-        private string component1;
-        private string component2;
-/*
-        public MediadorConcreto(Component1 component1, Component2 component2)
+        private TaggerMensajes componente1;
+        private Procesador componente2;
+        private IRespuesta componente3;
+        private IBusqueda componente4;
+        private IGeneradorPerfil componente5;
+
+        public MediadorConcreto(TaggerMensajes componente1,Procesador componente2,IRespuesta componente3,IBusqueda componente4,IGeneradorPerfil componente5)
         {
-            this._component1 = component1;
-            this._component1.SetMediator(this);
-            this._component2 = component2;
-            this._component2.SetMediator(this);
+            this.componente1 = componente1;
+            this.componente1.SetMediador(this);
+            this.componente2 = componente2;
+            this.componente2.SetMediador(this);
+            this.componente3 = componente3;
+            this.componente3.SetMediador(this);
+            this.componente4 = componente4;
+            this.componente4.SetMediador(this);
+            this.componente5 = componente5;
+            this.componente5.SetMediador(this);
         } 
-*/
-        public void Notificar(object sender, string ev)
+        public void Notificar(object sender, Mensaje mensaje)
         {
-            if (ev == "A")
+            if (mensaje.Tipo() == TipoMensaje.Despedida)
             {
                 Console.WriteLine("Mediator reacts on A and triggers folowing operations:");
-                this.component2.DoC();
+                this.componente3.Responder();
             }
-            if (ev == "D")
+            if (mensaje.Tipo() == TipoMensaje.)
             {
                 Console.WriteLine("Mediator reacts on D and triggers following operations:");
                 this.component1.DoB();
