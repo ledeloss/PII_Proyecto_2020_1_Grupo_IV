@@ -52,10 +52,10 @@ namespace Library
             return Interacciones.GetInteraccion ("minimo");
 
         }
-        public String PedirAclaraciones()
+        public void PedirAclaraciones()
         {
 
-            return Interacciones.GetInteraccion ("aclaracion");
+            Interacciones.GetInteraccion ("aclaracion");
 
         }
         
@@ -76,7 +76,15 @@ namespace Library
 
         }
 
- 
-
+        public void Preguntar(TipoEnvio tipo)
+        {
+            switch (tipo)
+            {
+                case TipoEnvio.Genero:
+                    this.PreguntarGenero();
+                    break;
+                    
+            }
+        }
     }
 }
