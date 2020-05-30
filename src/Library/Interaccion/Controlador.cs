@@ -23,6 +23,17 @@ namespace Library
             this.generadorPerfil = generadorPerfil;
             this.generadorPerfil.SetMediador (this);
         }
+        public void Dialogo()
+        {
+            this.ultimoEnvio = TipoEnvio.Saludo;
+            this.respuesta.Saludar();
+
+            while (this.ultimoEnvio != TipoEnvio.Despedida)
+            {
+                taggerMensajes.GetMensajeEntrante();
+            }
+        }
+
         public void Notificar (Mensaje mensaje)
         {
             switch (mensaje.Tipo ())

@@ -5,9 +5,8 @@ namespace Library
     {
         private IProcesador procesador;
         private ArchivoInteracciones interacciones;
-        public TaggerMensajes( ArchivoInteracciones archInteracciones, IProcesador proc, IMediador mediador = null)
+        public TaggerMensajes( ArchivoInteracciones archInteracciones, IProcesador proc)
         {
-            this.mediador = mediador;
             this.procesador = proc;
             this.interacciones = archInteracciones;
         }
@@ -21,7 +20,7 @@ namespace Library
         //Aplicamos patrón Creator porque TaggerMensajes contiene los datos que serán provistos para
         //inicializar instancias de Mensaje, y tiene un método que devuelve objetos del tipo Mensaje 
         //(TaggerMensajes usa de forma muy cercana objetos Mensaje)
-        public Mensaje EtiquetarMensaje()
+        public void GetMensajeEntrante()
         {
             string cont = procesador.getContenido();
             List<string> claves = procesador.getFrasesClave();
@@ -54,7 +53,10 @@ namespace Library
                 }
             }
             Mensaje mensaje = new Mensaje(cont, etiqueta, claves);
-            return mensaje;
+            this.mediador.Notificar(mensaje);
+           
         }
+
+       
     }
 }
