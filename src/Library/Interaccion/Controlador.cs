@@ -2,33 +2,160 @@ using System;
 
 namespace Library
 {
- class Controlador : IMediador
+    public class Controlador : IMediador
     {
-        private string component1;
-        private string component2;
-/*
-        public MediadorConcreto(Component1 component1, Component2 component2)
+        private TaggerMensajes taggerMensajes;
+
+        private Respuesta respuesta;
+        private IBusqueda busqueda;
+        private IGeneradorPerfil generadorPerfil;
+        private TipoEnvio ultimoEnvio;
+        private bool ProcesamientoExitoso = false;
+        public Controlador (TaggerMensajes taggerMensajes, Respuesta respuesta,
+            IBusqueda busqueda, IGeneradorPerfil generadorPerfil)
         {
-            this._component1 = component1;
-            this._component1.SetMediator(this);
-            this._component2 = component2;
-            this._component2.SetMediator(this);
-        } 
-*/
-        public void Notificar(object sender, string ev)
+            this.taggerMensajes = taggerMensajes;
+            this.taggerMensajes.SetMediador (this);
+            this.respuesta = respuesta;
+            this.respuesta.SetMediador (this);
+            this.busqueda = busqueda;
+            this.busqueda.SetMediador (this);
+            this.generadorPerfil = generadorPerfil;
+            this.generadorPerfil.SetMediador (this);
+        }
+        public void Dialogo()
         {
-            if (ev == "A")
+            this.ultimoEnvio = TipoEnvio.Saludo;
+            this.respuesta.Saludar();
+
+            while (this.ultimoEnvio != TipoEnvio.Despedida)
             {
-                Console.WriteLine("Mediator reacts on A and triggers folowing operations:");
-                this.component2.DoC();
+                taggerMensajes.GetMensajeEntrante();
             }
-            if (ev == "D")
+        }
+
+        public void Notificar (Mensaje mensaje)
+        {
+            switch (mensaje.Tipo ())
             {
-                Console.WriteLine("Mediator reacts on D and triggers following operations:");
-                this.component1.DoB();
-                this.component2.DoC();
+                case TipoMensaje.Genero:
+
+                    if ((ultimoEnvio == TipoEnvio.Genero) || (ultimoEnvio == TipoEnvio.Saludo))
+                    {
+                        generadorPerfil.SetGenero (mensaje.Contenido ());
+                        ProcesamientoExitoso = true;
+                    }
+                    else
+                    {
+                        ProcesamientoExitoso = false;
+                    }
+                    break;
+
+                case TipoMensaje.Numero:
+
+                    switch (ultimoEnvio)
+                    {
+                        case TipoEnvio.Edad:
+                            generadorPerfil.SetEdad (mensaje.Contenido ());
+                            ProcesamientoExitoso = true;
+                            break;
+
+                        case TipoEnvio.PrecioMax:
+                            generadorPerfil.SetPrecioMaximo (mensaje.Contenido ());
+                            ProcesamientoExitoso = true;
+                            break;
+
+                        case TipoEnvio.PrecioMin:
+                            generadorPerfil.SetPrecioMinimo (mensaje.Contenido ());
+                            ProcesamientoExitoso = true;
+                            break;
+
+                        default:
+                            ProcesamientoExitoso = false;
+                            break;
+
+                    }
+                    break;
+
+                case TipoMensaje.Interes:
+
+                    if ((ultimoEnvio == TipoEnvio.Interes) || (ultimoEnvio == TipoEnvio.Saludo))
+                    {
+                        generadorPerfil.SetInteres (mensaje.Contenido ());
+                        ProcesamientoExitoso = true;
+                    }
+                    else
+                    {
+                        ProcesamientoExitoso = false;
+                    }
+                    break;
+
+                case TipoMensaje.Positivo:
+                    if ((ultimoEnvio == TipoEnvio.Sugerencia))
+                    {
+                        ProcesamientoExitoso = true;
+                    }
+                    else
+                    {
+                        ProcesamientoExitoso = false;
+                    }
+                    break;
+
+                case TipoMensaje.Negativo:
+                    if ((ultimoEnvio == TipoEnvio.Sugerencia))
+                    {
+                        ultimoEnvio = TipoEnvio.Despedida;
+                        ProcesamientoExitoso = true;
+                    }
+                    else
+                    {
+                        if ((ultimoEnvio == TipoEnvio.Genero))
+                        { //TipoGenero Desconocido si no quiere brindar el Genero
+                            generadorPerfil.SetGenero (mensaje.Contenido ());
+                            ProcesamientoExitoso = true;
+                        }
+                        else
+                        {
+                            ProcesamientoExitoso = false;
+                        }
+                    }
+                    
+                    break;
+
+                case TipoMensaje.Saludo:
+                    ProcesamientoExitoso = (ultimoEnvio == TipoEnvio.Saludo);
+
+                    break;
+
+                case TipoMensaje.Despedida:
+                    ultimoEnvio = TipoEnvio.Despedida;
+                    ProcesamientoExitoso = false;
+
+                    break;
+
+                case TipoMensaje.Otros:
+                    ProcesamientoExitoso = false;
+
+                    break;
+
+            }
+
+            if (ProcesamientoExitoso)
+            {
+                this.ultimoEnvio = generadorPerfil.getDatoFaltante ();
+                if (this.ultimoEnvio == TipoEnvio.Sugerencia)
+                {
+                    //Hacer busqueda
+                }
+                else
+                {
+                    respuesta.Preguntar (ultimoEnvio);
+                }
+            }
+            else
+            {
+                respuesta.PedirAclaraciones (ultimoEnvio);
             }
         }
     }
 }
-

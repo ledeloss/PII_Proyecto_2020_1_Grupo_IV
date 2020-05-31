@@ -7,6 +7,7 @@ namespace Library
      */
     public class ArchivoInteracciones : ManejadorArchivos
     {
+        private static string interes = "interes";
         /*
         Esta clase maneja los archivos que contengan interacciones preestablecidas
         */
@@ -15,6 +16,31 @@ namespace Library
         {
             string path = $"\\..\\..\\..\\Interacciones\\{tipoInteraccion}.txt";
             return this.LeerLineaAleatoria (path);
+
+        }
+
+        public TipoMensaje BuscarEtiqueta(string text)
+        {
+
+            switch (text)
+            {
+                case "interes":
+                    return TipoMensaje.Interes;
+                case "numero":
+                    return TipoMensaje.Numero;
+                case "hombre":
+                    return TipoMensaje.Genero;
+                case "mujer":
+                    return TipoMensaje.Genero;
+                case "chau":
+                    return TipoMensaje.Despedida;
+                case "si":
+                    return TipoMensaje.Positivo;
+                case "no":
+                    return TipoMensaje.Negativo;
+                default:
+                    return TipoMensaje.Otros;
+            }
 
         }
 
