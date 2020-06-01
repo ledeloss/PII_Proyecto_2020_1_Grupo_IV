@@ -52,11 +52,13 @@ namespace Library
             return Interacciones.GetInteraccion ("minimo");
 
         }
-        public void PedirAclaraciones ()
+        public void PedirAclaraciones (TipoEnvio tipo)
         {
-
-            Interacciones.GetInteraccion ("aclaracion");
-
+            string envio = "";
+            envio += Interacciones.GetInteraccion ("aclaracion");
+            envio += "\n";
+            string tipoString = tipo.ToString().ToLower();
+            envio += Interacciones.GetInteraccion(tipoString);
         }
 
         public String PresentarSugerencias (List<string> regalos)
@@ -109,7 +111,9 @@ namespace Library
                     break;
                     
                 case TipoEnvio.Sugerencia:
-                    this.PresentarSugerencias ();
+                    List<string> lista = new List<string>();
+                    lista.Add("Regalo1");
+                    this.PresentarSugerencias (lista);
                     break;
 
             }
