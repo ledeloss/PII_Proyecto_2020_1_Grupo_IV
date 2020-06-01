@@ -11,45 +11,51 @@ namespace Library
     */
     public class Respuesta: ComponenteBase
     {
-
+        
+        private IPlataforma plataforma;
         private static ArchivoInteracciones Interacciones = new ArchivoInteracciones ();
-        public String Saludar ()
+
+        public void SetPlataforma(IPlataforma plat)
         {
-            return Interacciones.GetInteraccion ("saludar");
+            this.plataforma=plat;
         }
-        public String Despedirse ()
+        public void Saludar ()
         {
-            return Interacciones.GetInteraccion ("despedir");
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("saludar"));
         }
-        public String PreguntarGenero ()
+        public void Despedirse ()
         {
-
-            return Interacciones.GetInteraccion ("genero");
-
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("despedir"));
         }
-        public String PreguntarEdad ()
+        public void PreguntarGenero ()
         {
 
-            return Interacciones.GetInteraccion ("edad");
-
-        }
-        public String PreguntarIntereses ()
-        {
-
-            return Interacciones.GetInteraccion ("interes");
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("genero"));
 
         }
-        public String PreguntarPrecioMaximo ()
+        public void PreguntarEdad ()
         {
 
-            return Interacciones.GetInteraccion ("maximo");
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("edad"));
+
+        }
+        public void PreguntarIntereses ()
+        {
+
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("interes"));
+
+        }
+        public void PreguntarPrecioMaximo ()
+        {
+
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("maximo"));
 
         }
 
-        public String PreguntarPrecioMinimo ()
+        public void PreguntarPrecioMinimo ()
         {
 
-            return Interacciones.GetInteraccion ("minimo");
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("minimo"));
 
         }
         public void PedirAclaraciones (TipoEnvio tipo)
@@ -61,20 +67,20 @@ namespace Library
             envio += Interacciones.GetInteraccion(tipoString);
         }
 
-        public String PresentarSugerencias (List<string> regalos)
+        public void PresentarSugerencias (List<string> regalos)
         {
             string resultado = Interacciones.GetInteraccion ("presentaSugerencia");
             foreach (string regalo in regalos)
             {
                 resultado += "\n" + regalo;
             }
-            return resultado;
+            plataforma.EnviarMensaje(resultado);
 
         }
-        public String ConfirmarSugerencia ()
+        public void ConfirmarSugerencia ()
         {
 
-            return Interacciones.GetInteraccion ("sugerencia");
+            plataforma.EnviarMensaje(Interacciones.GetInteraccion ("sugerencia"));
 
         }
 
