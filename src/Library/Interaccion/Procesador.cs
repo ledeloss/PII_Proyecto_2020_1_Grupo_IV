@@ -8,8 +8,17 @@ namespace Library
     para saber los tipos de interacciones esperados, tambien genera los filtros especifiocs necesarios para interatuar 
     con las Tiendas como MercaoLibre o Amazon.
     */
-    public class Procesador
+    public class Procesador : IProcesador
     {
+        public string getContenido()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<string> getFrasesClave()
+        {
+            throw new NotImplementedException();
+        }
 
         public bool ValidarMensaje ()
         {
