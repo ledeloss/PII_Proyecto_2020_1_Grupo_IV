@@ -1,6 +1,6 @@
 namespace Library
 {
-    public class IBusqueda 
+    public class IBusqueda: ComponenteBase
     {
 
     }

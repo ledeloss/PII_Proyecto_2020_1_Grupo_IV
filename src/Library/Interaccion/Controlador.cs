@@ -8,11 +8,11 @@ namespace Library
 
         private Respuesta respuesta;
         private IBusqueda busqueda;
-        private IGeneradorPerfil generadorPerfil;
+        private GeneradorPerfil generadorPerfil;
         private TipoEnvio ultimoEnvio;
         private bool ProcesamientoExitoso = false;
         public Controlador (TaggerMensajes taggerMensajes, Respuesta respuesta,
-            IBusqueda busqueda, IGeneradorPerfil generadorPerfil)
+            IBusqueda busqueda, GeneradorPerfil generadorPerfil)
         {
             this.taggerMensajes = taggerMensajes;
             this.taggerMensajes.SetMediador (this);

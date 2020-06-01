@@ -27,31 +27,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FIT\\.nuget\\packages\\": {}
+    "C:\\Users\\mariana.roso\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
+      "projectUniqueName": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
       "projectName": "Program",
-      "projectPath": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
-      "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
+      "projectPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
+      "packagesPath": "C:\\Users\\mariana.roso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mariana.roso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
-              "projectPath": "C:\\Users\\FIT\\Documents\\P2\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
+            "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
             }
           }
         }
@@ -79,7 +85,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

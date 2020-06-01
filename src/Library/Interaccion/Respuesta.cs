@@ -9,7 +9,7 @@ namespace Library
         Se le da esta responsabiliadad para aplicar el Principio de SRP, inicialmente esto lo iba a hacer el mismo
         Procesador pero decidimos generar esta nueva clase y asignarle esta responsabilidad.
     */
-    public class Respuesta
+    public class Respuesta: ComponenteBase
     {
 
         private static ArchivoInteracciones Interacciones = new ArchivoInteracciones ();

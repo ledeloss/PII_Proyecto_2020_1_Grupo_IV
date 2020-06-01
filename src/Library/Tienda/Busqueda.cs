@@ -8,7 +8,7 @@ namespace Library
         Decidimos hacer la busqueda en una clase independiente y que no tenga mas de una razon para cambiar,
         utilizando el Principio SRP. 
     */
-    public class Busqueda
+    public class Busqueda: ComponenteBase
     {
         void GenerarBusqueda (ITienda tienda, IFiltro filtro)
         {
