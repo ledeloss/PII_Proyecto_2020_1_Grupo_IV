@@ -5,7 +5,7 @@ namespace Library
     public interface IMediador
     {         
 
-        void Notificar(object sender, string ev );
+        void Notificar(Mensaje mensaje);
         
     }
 

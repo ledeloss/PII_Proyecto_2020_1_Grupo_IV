@@ -5,8 +5,10 @@ namespace Library
         Numero,
         Genero,
         Interes,
+        Saludo,
         Despedida,
         Positivo,
-        Negativo
+        Negativo,
+        Otros
     }
 }
