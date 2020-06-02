@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {}
+    "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
+    "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+        "projectPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
+        "outputPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -36,6 +36,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Azure.AI.TextAnalytics": {
+              "target": "Package",
+              "version": "[1.0.0-preview.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
