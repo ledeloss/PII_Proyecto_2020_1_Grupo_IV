@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "docfx/2.53.1": {
+        "type": "package",
+        "compile": {
+          "lib/net472/docfx.exe": {}
+        },
+        "runtime": {
+          "lib/net472/docfx.exe": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -29,6 +38,18 @@
     }
   },
   "libraries": {
+    "docfx/2.53.1": {
+      "sha512": "QKxrcs+bd7p6hLQqNLdq1jwGPwjl/IjJ9FovhpEw28GM2eIIInA5292g87SHZTWBunRQrtuumxE9jVzufLcrVg==",
+      "type": "package",
+      "path": "docfx/2.53.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docfx.2.53.1.nupkg.sha512",
+        "docfx.nuspec",
+        "lib/net472/docfx.exe"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -176,7 +197,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "docfx >= 2.53.1"
     ]
   },
   "packageFolders": {
@@ -186,11 +208,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+      "projectUniqueName": "c:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+      "projectPath": "c:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
       "packagesPath": "C:\\Users\\mariana.roso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
+      "outputPath": "c:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -225,6 +247,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "docfx": {
+            "target": "Package",
+            "version": "[2.53.1, )"
           }
         },
         "imports": [
@@ -240,5 +266,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"docfx 2.53.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "docfx",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

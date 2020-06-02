@@ -2,6 +2,12 @@ using System;
 
 namespace Library
 {
+
+/// <summary>
+/// La clase controlador se encarga de manejar la interaccion entre el usuario y el bot. Maneja los mensajes entre ambos.
+/// Hereda de IMediador lo que nos permite reutilizar codigo, resulta util ya que esta interfaz contiene el metodo notificar que vamos a reutilizar
+/// en la interaccion antes mencionada.
+/// </summary>
     public class Controlador : IMediador
     {
         private TaggerMensajes taggerMensajes;
