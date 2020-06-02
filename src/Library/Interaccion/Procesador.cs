@@ -10,12 +10,21 @@ namespace Library
     */
     public class Procesador : IProcesador
     {
-        public string getContenido()
+        private string UltimoMensaje;
+        private IPlataforma plataforma;
+        public void SetPlataforma(IPlataforma plat)
         {
-            throw new NotImplementedException();
+            this.plataforma = plat;
+        }
+        public string GetContenido() //1ero
+        {
+            string mensaje = plataforma.RecibirMensaje();
+            this.UltimoMensaje = mensaje;
+            return mensaje;
         }
 
-        public List<string> getFrasesClave()
+
+        public List<string> GetFrasesClave(string texto)//2do
         {
             throw new NotImplementedException();
         }
@@ -24,15 +33,7 @@ namespace Library
         {
             return true;
         }
+        
 
-        void GenerarFiltro ()
-        {
-
-        }
-
-        void InterpretarInteraccion ()
-        {
-
-        }
     }
 }

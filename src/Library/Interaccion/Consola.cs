@@ -13,11 +13,13 @@ namespace Library
     {
         public string RecibirMensaje ()
         {
-            return "";
+            string input = Console.ReadLine();
+            return input;
         }
         public void EnviarMensaje (string mensaje)
         {
             Console.WriteLine (mensaje);
         }
+
     }
 }

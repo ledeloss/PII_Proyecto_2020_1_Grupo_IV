@@ -14,7 +14,6 @@ namespace Library
         {
 
         }
-
         public List<Regalo> FiltrarSugerencias (List<Regalo> regalos)
         {
             return new List<Regalo> ();
