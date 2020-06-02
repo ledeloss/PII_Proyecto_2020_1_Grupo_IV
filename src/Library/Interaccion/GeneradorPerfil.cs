@@ -5,7 +5,7 @@ namespace Library
 {
     public class GeneradorPerfil : ComponenteBase
     {
-        private int[] preguntados = new int[5]
+        protected int[] preguntados = new int[5]
         {
             0,
             0,
@@ -214,7 +214,7 @@ namespace Library
             return true;
         }
 
-        private void ActualizarPreguntados (int indice)
+        public void ActualizarPreguntados (int indice)
         {
             this.ultimoPreguntado = indice;
             this.preguntados[indice] = 1;
