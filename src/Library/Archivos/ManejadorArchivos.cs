@@ -5,9 +5,11 @@ using System.IO;
 namespace Library
 {
 
-    /* Clase la cual por medio de Herencia  servira de molde para manejar los archivos con los cuales trabajemos tanto para guardar información como para manipularla
-    utilizando asi reutilización de código.
-    */
+/// <summary>
+/// La clase ManejadorArchivos tendra todo lo necesario para trabajar con los archivos que utilizaremos tanto para la configuracion, la interaccion
+/// o el armado del perfil del usuario. Sera la base para todo lo que respecta archivos, por medio de herencia reutilizaremos el codigo de esta clase.
+/// Lo cual nos facilitara el desarrollo de las clases que manejan los archivos anteriormente mencionados.
+/// </summary>
 
     public class ManejadorArchivos
     {

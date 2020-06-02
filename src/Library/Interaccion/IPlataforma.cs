@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    /*
-     Interfase que sera el molde para las diferentes API que utilizaremos, estas luego la implementaran Las clases 
-     Console y API.
-     Decidimos manejar las plataformas de esta manera para facilitar las eventuales adiciones de
-    futuras plataformas sin afectar el funcionamiento (Clase Abierta a la Extension) las responsabilidades de la
-    clase pueden ser exendidas y es cerrada a la modificacion, (no es posible ni necesario modificar el codigo de 
-    dicha clase) Por tal motivo identificamos que el Principio OCP es justamente lo que utilzamos aqui.
-    */
+
+/// <summary>
+/// La interfase IPlataforma sera el molde para las comunicaciones ya sea API o Consola. Reutilizamos codigo, y decidimos utilizar esta interfase
+/// de forma tal que nos permita extender a futuras plataformas sin romper el funcionamiento. Utilizamos aqui OCP.
+/// Cuando extendamos no tendremos que modificar el codigo simplemente utilizando la interfase IPlataforma podremos hacerlo. Para esto nos fue
+/// util utilizar OCP (clase abierta a la extension y cerrada a la modificacion)
+/// </summary>
+    
     public interface IPlataforma
     {
         string RecibirMensaje ();

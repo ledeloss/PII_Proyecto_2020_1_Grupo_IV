@@ -1,14 +1,12 @@
 namespace Library
 {
-    /*Para respetar el principio de SRP,Se le asigna a estas clases una unica responsabilidad,y razon de cambio.
-      Generearemos clases que hereden de ManejadorArchivos y manejen los distintos tipos de archivos que se van a necesitar. 
-      En caso de ser necesario, se sobrecarga alguno de los métodos de la clase padre para adecuarlo al archivo que se necesite leer
-     */
+/// <summary>
+/// La clase ArchivoPerfiles se encarga de manejar los archivos que contengan perfiles de usuario para completar los filtros de busqueda.
+/// Aplicamos aqui herencia como metodo de reutilizacion de codigo, ya que vamos a reutilizar lo referente al manejador de archivos. 
+/// </summary>
+/// 
     public class ArchivoPerfiles : ManejadorArchivos
     {
-        /*
-        Esta clase maneja los archivos que contengan perfiles de usuarios estándares para complementar los filtros
-        */
 
     }
 }

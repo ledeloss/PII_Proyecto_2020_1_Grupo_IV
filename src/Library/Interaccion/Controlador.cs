@@ -29,6 +29,10 @@ namespace Library
             this.generadorPerfil = generadorPerfil;
             this.generadorPerfil.SetMediador (this);
         }
+/// <summary>
+/// El metodo Dialogo sera encargado del dialogo con el usuario, si es el ultimo mensaje saluda, de caso contrario recibe los mensajes,
+/// continuando con la interacción.
+/// </summary>
         public void Dialogo()
         {
             this.ultimoEnvio = TipoEnvio.Saludo;
@@ -40,6 +44,11 @@ namespace Library
             }
         }
 
+/// <summary>
+/// El método notificar recibe un mensaje y lo que hace dependiendo el tipo del mensaje, lo intenta clasificar
+/// notificando si dicho procesamiento fue exitoso o no.
+/// </summary>
+/// <param name="mensaje"></param>
         public void Notificar (Mensaje mensaje)
         {
             switch (mensaje.Tipo ())

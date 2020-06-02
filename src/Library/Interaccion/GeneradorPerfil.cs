@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace Library
 {
+
+/// <summary>
+/// La clase GeneradorPerfil será la encargada de generar un perfil de usuario.
+/// 
+/// </summary>
     public class GeneradorPerfil : ComponenteBase
     {
         private int[] preguntados = new int[5]
