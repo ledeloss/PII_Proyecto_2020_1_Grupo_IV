@@ -3,19 +3,30 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class GeneradorPerfil: ComponenteBase
+    public class GeneradorPerfil : ComponenteBase
     {
-        private int[] preguntados = new int[5] {0,0,0,0,0}; 
+        protected int[] preguntados = new int[5]
+        {
+            0,
+            0,
+            0,
+            0,
+            0
+        };
         //[edad, genero, precioMin, precioMax, intereses]
         private int ultimoPreguntado = -1;
-        private Perfil persona = new Perfil();
-        
-        public void SetEdad(string stringEdad)
+        private Perfil persona = new Perfil ();
+        public Perfil GetPersona ()
         {
-            int edad = Int32.Parse(stringEdad); 
+            return this.persona;
+        }
+
+        public void SetEdad (string stringEdad)
+        {
+            int edad = Int32.Parse (stringEdad);
             try
             {
-                this.ValidarEdad(edad);
+                this.ValidarEdad (edad);
             }
             catch
             {
@@ -81,113 +92,117 @@ namespace Library
             }
         }
 
-        private void ValidarEdad(int edad)
+        public void ValidarEdad (int edad)
         {
             if (edad < 0 || edad > 120)
             {
-                throw new NotImplementedException();
+                throw new NotImplementedException ();
             }
         }
 
-        public void SetPrecioMaximo(string precioMax)
+        public void SetPrecioMaximo (string precioMax)
         {
-            int valor = Int32.Parse(precioMax);
+            int valor = Int32.Parse (precioMax);
             try
             {
                 persona.PrecioMax = valor;
-            
+
             }
-            catch 
+            catch
             {
 
             }
         }
 
-        public void SetPrecioMinimo(string precioMin)
+        public void SetPrecioMinimo (string precioMin)
         {
-            int valor = Int32.Parse(precioMin);
+            int valor = Int32.Parse (precioMin);
             try
             {
                 persona.PrecioMin = valor;
-            
+
             }
-            catch 
+            catch
             {
 
             }
         }
 
-        public void SetInteres(string interes)
+        public void SetInteres (string interes)
         {
-            persona.AddInteres(interes);
+            persona.AddInteres (interes);
         }
 
-        public void SetGenero(string genero)
+        public void SetGenero (string genero)
         {
-            switch (genero)
+            switch (genero.ToLower())
             {
                 case "femenino":
                     persona.Genero = TipoGenero.Femenino;
                     break;
                 case "masculino":
-                    persona.Genero = TipoGenero.Femenino;
+                    persona.Genero = TipoGenero.Masculino;
                     break;
                 case "no":
                     persona.Genero = TipoGenero.Desconocido;
                     break;
+                default:
+                    persona.Genero = TipoGenero.Desconocido;
+                    break;
+
             }
         }
 
-        public TipoEnvio getDatoFaltante()
+        public TipoEnvio getDatoFaltante ()
         {
             if ((this.ultimoPreguntado == 3) && (preguntados[2] == 0))
             {
-                ActualizarPreguntados(2);
+                ActualizarPreguntados (2);
                 return TipoEnvio.PrecioMin;
             }
             else
             {
                 if (this.ultimoPreguntado == 2 && (preguntados[3] == 0))
                 {
-                    ActualizarPreguntados(3);
+                    ActualizarPreguntados (3);
                     return TipoEnvio.PrecioMax;
                 }
             }
-            Random rnd = new Random();
-            if (!this.IsPerfilCompleto())
+            Random rnd = new Random ();
+            if (!this.IsPerfilCompleto ())
             {
-                int indice = rnd.Next(this.preguntados.Length);
+                int indice = rnd.Next (this.preguntados.Length);
                 while (this.preguntados[indice] != 0)
                 {
-                    indice = rnd.Next(this.preguntados.Length);
+                    indice = rnd.Next (this.preguntados.Length);
                 }
                 switch (indice)
                 {
                     case 0:
-                        ActualizarPreguntados(0);
+                        ActualizarPreguntados (0);
                         return TipoEnvio.Edad;
-                    
+
                     case 1:
-                        ActualizarPreguntados(1);
+                        ActualizarPreguntados (1);
                         return TipoEnvio.Genero;
 
                     case 2:
-                        ActualizarPreguntados(2);
+                        ActualizarPreguntados (2);
                         return TipoEnvio.PrecioMin;
 
                     case 3:
-                        ActualizarPreguntados(3);
+                        ActualizarPreguntados (3);
                         return TipoEnvio.PrecioMax;
 
                     case 4:
-                        ActualizarPreguntados(4);
+                        ActualizarPreguntados (4);
                         return TipoEnvio.Interes;
                 }
             }
             return TipoEnvio.Sugerencia;
         }
 
-        public bool IsPerfilCompleto()
+        public bool IsPerfilCompleto ()
         {
             foreach (int item in preguntados)
             {
@@ -199,10 +214,10 @@ namespace Library
             return true;
         }
 
-        private void ActualizarPreguntados(int indice)
+        public void ActualizarPreguntados (int indice)
         {
             this.ultimoPreguntado = indice;
-            this.preguntados[indice] = 1;            
+            this.preguntados[indice] = 1;
         }
     }
 }

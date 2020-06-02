@@ -328,3 +328,4 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+src/Test/Library.Test/obj/Debug/netcoreapp3.1/Library.Test.csprojAssemblyReference.cache
