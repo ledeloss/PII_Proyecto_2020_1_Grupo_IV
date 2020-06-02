@@ -3,7 +3,7 @@ namespace Library
 {
     public interface IProcesador
     {
-        string getContenido();
-        List<string> getFrasesClave();
+        string GetContenido();
+        List<string> GetFrasesClave(string texto);
     }
 }

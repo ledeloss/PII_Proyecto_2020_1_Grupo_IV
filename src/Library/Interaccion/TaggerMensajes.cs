@@ -22,8 +22,8 @@ namespace Library
         //(TaggerMensajes usa de forma muy cercana objetos Mensaje)
         public void GetMensajeEntrante()
         {
-            string cont = procesador.getContenido();
-            List<string> claves = procesador.getFrasesClave();
+            string cont = procesador.GetContenido();
+            List<string> claves = procesador.GetFrasesClave(cont);
             TipoMensaje etiqueta = TipoMensaje.Otros;
             //Si el procesador no encuentra palabras clave 
             if (claves.Count == 0)
