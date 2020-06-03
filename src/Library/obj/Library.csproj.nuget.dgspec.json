@@ -41,6 +41,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Azure.AI.TextAnalytics": {
+              "target": "Package",
+              "version": "[1.0.0-preview.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

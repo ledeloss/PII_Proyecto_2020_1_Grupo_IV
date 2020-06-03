@@ -9,12 +9,6 @@ namespace Library.Test
         public GeneradorPerfilStub() 
         {
             
-        }
-      
-
-
-
-
-
+        }    
     }
 }

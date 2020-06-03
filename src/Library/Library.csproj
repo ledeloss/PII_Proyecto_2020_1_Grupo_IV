@@ -5,4 +5,9 @@
   <ItemGroup>
     <PackageReference Include="docfx" Version="2.53.1"/>
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.TextAnalytics" Version="1.0.0-preview.5" />
+  </ItemGroup>
+
 </Project>
