@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using System;
+using Library;
 
 
 namespace Library.Test

@@ -1,6 +1,7 @@
+using Library;
 namespace Library.Test.GeneradorPerfil
 {
-    internal class PreguntasOrdenAleatorioStub: PreguntasOrdenAleatorio
+    internal class PreguntasOrdenAleatorioStub: Library.PreguntasOrdenAleatorio
     {
         public void SetPreguntado(int indice)
         {
@@ -10,6 +11,6 @@ namespace Library.Test.GeneradorPerfil
         {
             this.ultimoPreguntado = indice;
         }
-        
     }
+    
 }

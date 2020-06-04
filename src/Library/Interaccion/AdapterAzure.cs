@@ -3,7 +3,7 @@ namespace Library
 {
 
 /// <summary>
-/// Prueba!!!!!!!!!!!AdapterAzure es una clase que fue creada para interactuar con los servicios externos de Azure para asi utilizarlos en nuestro programa.
+/// AdapterAzure es una clase que fue creada para interactuar con los servicios externos de Azure para asi utilizarlos en nuestro programa.
 /// Esta Clase sirve de traductor entre la clase de la API Externa (Azure-TextAnalytics) y la clase TaggerMensaje .
 /// Utilizamos el Patron Adapter,para manejar unicamente temas relacionados a adaptacion de datos y no involucrarnos con conocer
 /// el funcionamiento interno del Servicio externo.

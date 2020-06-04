@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
-=======
-    "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\Program.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
-        "projectName": "Library",
-        "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
->>>>>>> Nahuel2
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -73,19 +59,15 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-<<<<<<< HEAD
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-=======
->>>>>>> Nahuel2
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
     "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -94,16 +76,6 @@
         "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
-=======
-    "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\Program.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\Program.csproj",
-        "projectName": "Program",
-        "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\Program.csproj",
-        "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\obj\\",
->>>>>>> Nahuel2
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -117,13 +89,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-<<<<<<< HEAD
               "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
                 "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
-=======
-              "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
-                "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
->>>>>>> Nahuel2
               }
             }
           }

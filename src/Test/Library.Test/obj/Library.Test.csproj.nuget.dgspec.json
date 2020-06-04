@@ -1,29 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj": {}
+    "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
+    "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+        "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
+        "outputPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -34,21 +34,19 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp3.1": {
           "dependencies": {
             "Azure.AI.TextAnalytics": {
               "target": "Package",
               "version": "[1.0.0-preview.5, )"
             },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
             "docfx": {
               "target": "Package",
               "version": "[2.53.1, )"
+            },
+            "docfx.console": {
+              "target": "Package",
+              "version": "[2.54.0, )"
             }
           },
           "imports": [
@@ -61,18 +59,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj": {
+    "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj",
+        "projectUniqueName": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj",
         "projectName": "Library.Test",
-        "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj",
+        "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\Library.Test.csproj",
         "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\obj\\",
+        "outputPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Test\\Library.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -86,8 +89,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
-                "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
+              "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
               }
             }
           }
