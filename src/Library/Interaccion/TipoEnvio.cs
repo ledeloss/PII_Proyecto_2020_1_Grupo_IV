@@ -1,7 +1,7 @@
 namespace Library
 {
 /// <summary>
-/// Tipo envio define todos los posibles valores fijos que pueda contener el envio
+/// Tipoenvio define todos los valores que aceptamos como categorías de interacciones HACIA la Plataforma.
 /// </summary>
     public enum TipoEnvio
     {
