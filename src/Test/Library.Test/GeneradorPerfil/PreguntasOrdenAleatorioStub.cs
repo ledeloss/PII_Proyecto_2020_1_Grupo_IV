@@ -6,5 +6,10 @@ namespace Library.Test.GeneradorPerfil
         {
             this.preguntados[indice] = 1;
         }
+        public void SetUltimaPregunta(int indice)
+        {
+            this.ultimoPreguntado = indice;
+        }
+        
     }
 }

@@ -29,6 +29,13 @@ namespace Library
         //(TaggerMensajes usa de forma muy cercana objetos Mensaje)
         public void GetMensajeEntrante()
         {
+           
+            Mensaje mensaje = this.EtiquetarMensaje();
+            this.mediador.Notificar(mensaje);
+           
+        }
+        public Mensaje EtiquetarMensaje()
+        {
             string cont = procesador.GetContenido();
             List<string> claves = procesador.GetFrasesClave(cont);
             TipoMensaje etiqueta = TipoMensaje.Otros;
@@ -59,10 +66,9 @@ namespace Library
                     etiqueta = interacciones.BuscarEtiqueta(clave);
                 }
             }
-            Mensaje mensaje = new Mensaje(cont, etiqueta, claves);
-            this.mediador.Notificar(mensaje);
-           
+            return new Mensaje(cont, etiqueta, claves);
         }
+
 
        
     }

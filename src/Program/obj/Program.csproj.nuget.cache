@@ -1,5 +1,9 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "dgSpecHash": "rpxI+sFWsu+WnHSBINWso+MBZazfuAqXZ48V5dK3+sSrz7KFJrdmicPbBBe570sbt/xjD15Mf3m9YUxpuejbMQ==",
+=======
+  "dgSpecHash": "KYw5TZvbd28EJlHOqMxPdT3sTEt8wyXNsWPPe3U8B97ILpNRPy/VljlAVOX06w6sZ8Tg+AMJIThcKdgbyv1QEA==",
+>>>>>>> Nahuel2
   "success": true
 }

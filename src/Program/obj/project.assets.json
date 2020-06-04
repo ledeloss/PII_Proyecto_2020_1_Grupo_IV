@@ -42,12 +42,15 @@
           "lib/net472/docfx.exe": {}
         }
       },
+<<<<<<< HEAD
       "docfx.console/2.54.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
+=======
+>>>>>>> Nahuel2
       "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
         "type": "package",
         "compile": {
@@ -116,8 +119,12 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Azure.AI.TextAnalytics": "1.0.0-preview.5",
+<<<<<<< HEAD
           "docfx": "2.53.1",
           "docfx.console": "2.54.0"
+=======
+          "docfx": "2.53.1"
+>>>>>>> Nahuel2
         },
         "compile": {
           "bin/placeholder/Library.dll": {}
@@ -173,6 +180,7 @@
         "lib/net472/docfx.exe"
       ]
     },
+<<<<<<< HEAD
     "docfx.console/2.54.0": {
       "sha512": "YETM5uS8ki/8I9z52+CSxZpffRo8XMt6zx57i+DkrRjEvE5gszqUH7huDcEWGvbcZnMv1Qf8/My4J1YyZvl1Hw==",
       "type": "package",
@@ -292,6 +300,8 @@
         "tools/itextsharp.dll"
       ]
     },
+=======
+>>>>>>> Nahuel2
     "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
       "sha512": "K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
       "type": "package",
@@ -512,11 +522,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
       "projectName": "Program",
       "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
       "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\Program.csproj",
+      "projectName": "Program",
+      "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\Program.csproj",
+      "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\program\\obj\\",
+>>>>>>> Nahuel2
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -530,8 +548,13 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
               "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
+=======
+            "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\FIT\\Desktop\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
+>>>>>>> Nahuel2
             }
           }
         }

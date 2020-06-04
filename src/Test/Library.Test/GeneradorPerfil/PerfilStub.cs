@@ -9,6 +9,7 @@ namespace Library.Test
         {
 
         }
+        //Precio Maximo y Precio Minimo se van a preguntar de forma consecutiva  
         public PerfilStub (TipoGenero genero, TipoGeneraciones edad, List<string> intereses, int precioMin, int PrecioMax)
         {
             this.Genero = genero;
