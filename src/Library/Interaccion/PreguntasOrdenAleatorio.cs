@@ -1,6 +1,11 @@
 using System;
 namespace Library
 {
+/// <summary>
+/// La clase PreguntasOrdenAleatorio implementa la interfase IGeneradorPreguntas. Implementando su metodo reutilizando codigo y evitando depender
+/// de clases intermedias.
+/// Se encarga de que las preguntas no sean arrojadas siempre en el mismo orden.
+/// </summary>
     public class PreguntasOrdenAleatorio : IGeneradorPreguntas
     {
         protected int[] preguntados = new int[5]

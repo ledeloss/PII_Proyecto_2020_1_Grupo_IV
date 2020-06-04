@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 namespace Library
 {
+/// <summary>
+/// La clase TaggerMensajes implementa ComponenteBase, con etiquetas define el tipo de interacción.
+/// </summary>
     public class TaggerMensajes: ComponenteBase
     {
         private IProcesador procesador;

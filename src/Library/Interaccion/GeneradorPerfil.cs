@@ -6,7 +6,7 @@ namespace Library
 
 /// <summary>
 /// La clase GeneradorPerfil será la encargada de generar un perfil de usuario.
-/// 
+/// Implementa ComponenteBase lo cual nos permite reutilizar código
 /// </summary>
     public class GeneradorPerfil : ComponenteBase
     {
@@ -21,11 +21,17 @@ namespace Library
             return this.persona;
         }
 
+/// <summary>
+/// Este metodo setea la edad, primero convierte el string que nos llega en un entero capturando la excepcion que puede llegar a dar.
+/// Conjuntamente clasifica a cada rango de edad en una generacion
+/// </summary>
+/// <param name="stringEdad"></param>
         public void SetEdad (string stringEdad)
         {
-            int edad = Int32.Parse (stringEdad);
+            
             try
             {
+                int edad = Int32.Parse (stringEdad);
                 this.ValidarEdad (edad);
             }
             catch
@@ -96,15 +102,17 @@ namespace Library
         {
             if (edad < 0 || edad > 120)
             {
+                //no implementamos la excepcion que capturamos pero entendemos que debe arrojarla dadas estas condiciones
                 throw new NotImplementedException ();
             }
         }
 
+
         public void SetPrecioMaximo (string precioMax)
-        {
-            int valor = Int32.Parse (precioMax);
+        { 
             try
             {
+                int valor = Int32.Parse (precioMax);
                 persona.PrecioMax = valor;
 
             }
@@ -116,9 +124,9 @@ namespace Library
 
         public void SetPrecioMinimo (string precioMin)
         {
-            int valor = Int32.Parse (precioMin);
             try
             {
+                int valor = Int32.Parse (precioMin);
                 persona.PrecioMin = valor;
 
             }
@@ -132,7 +140,10 @@ namespace Library
         {
             persona.AddInteres (interes);
         }
-
+/// <summary>
+/// Metodo que setea el genero si el usuario no desea especificarlo, este será "desconocido"
+/// </summary>
+/// <param name="genero"></param>
         public void SetGenero (string genero)
         {
             switch (genero.ToLower())

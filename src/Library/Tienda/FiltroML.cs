@@ -2,10 +2,11 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    /*Dado que cada tienda puede tener parámetros distintos para filtrar sus publicaciones, por SRP, 
-    generamos clases individuales para que la única razón de cambio de la clase sea que cambia el 
-    sistema de filtrado de la página a la que brindan acceso.
-    */
+/// <summary>
+/// La clase FiltroML implementa IFiltro, reutilizando código dado que cada tienda puede tener parámetros distintos 
+/// para filtrar sus publicaciones, por SRP, generamos clases individuales para que la única razón de cambio de la clase 
+/// sea que cambia el sistema de filtrado de la página a la que brindan acceso.
+/// </summary>
     public class FiltroML : IFiltro
     {
         public List<string> interes

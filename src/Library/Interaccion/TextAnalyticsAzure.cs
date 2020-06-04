@@ -6,6 +6,9 @@ using Azure.AI.TextAnalytics;
 
 namespace Library
 {
+/// <summary>
+/// La clase TextAnalyticsAzure contiene lo necesario para vincularnos con los servicios de Azure.
+/// </summary>
     public class TextAnalyticsAzure
     {
         private static readonly AzureKeyCredential credentials = new AzureKeyCredential ("3eefe592346b436184724d709cb10572");

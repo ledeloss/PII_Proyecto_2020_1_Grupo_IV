@@ -1,10 +1,10 @@
 namespace Library
 {
+/// <summary>
+/// La clase ApiML brinda acceso al sitio MercadoLibre.
+/// </summary>
     public class ApiML
     {
-        /*
-        Clase que brinda acceso al sitio MercadoLibre.
-        Funciona en modo Singleton, para garantizar un único acceso al sitio.
-        */
+       
     }
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Library
 {
-
-    /* 
-    Clase que realiza un ordenamiento y procesamiento de las sugerencias
-     */
+/// <summary>
+/// La clase ProcesadorSugerencias realiza un ordenamiento y procesamiento de las sugerencias obtenidas.
+/// </summary>
+    
     public class ProcesadorSugerencias
     {
 
