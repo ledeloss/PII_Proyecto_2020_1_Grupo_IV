@@ -37,7 +37,7 @@ namespace Library
             0
         };
         
-        private int ultimoPreguntado = -1;
+        protected int ultimoPreguntado = -1;
         /// <summary>
         /// Para definir cual es la siguiente pregunta a realizar, se realiza de forma Aleatoria
         ///  pero con algunas consideraciones como ser: 

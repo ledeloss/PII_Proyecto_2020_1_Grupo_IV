@@ -34,10 +34,10 @@ namespace Library
         /// <param name="stringEdad"></param>
         public void SetEdad (string stringEdad)
         {
-
+            int edad = 30 ;
             try
             {
-                int edad = Int32.Parse (stringEdad);
+               edad= Int32.Parse (stringEdad);
                 this.ValidarEdad (edad);
             }
             catch

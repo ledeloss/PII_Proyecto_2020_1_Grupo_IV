@@ -1,7 +1,38 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.0": {
+    ".NETCoreApp,Version=v3.1": {
+      "Azure.AI.TextAnalytics/1.0.0-preview.5": {
+        "type": "package",
+        "dependencies": {
+          "Azure.Core": "1.2.1",
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "System.Text.Json": "4.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.AI.TextAnalytics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.AI.TextAnalytics.dll": {}
+        }
+      },
+      "Azure.Core/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "System.Buffers": "4.5.0",
+          "System.Diagnostics.DiagnosticSource": "4.6.0",
+          "System.Memory": "4.5.3",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Azure.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Azure.Core.dll": {}
+        }
+      },
       "docfx/2.53.1": {
         "type": "package",
         "compile": {
@@ -11,44 +42,32 @@
           "lib/net472/docfx.exe": {}
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {
+      "docfx.console/2.54.0": {
         "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
+        "build": {
+          "build/docfx.console.targets": {}
         }
       },
-      "NETStandard.Library/2.0.3": {
+      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0"
-        },
         "compile": {
-          "lib/netstandard1.0/_._": {}
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "build": {
-          "build/netstandard2.0/NETStandard.Library.targets": {}
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.6.0": {
         "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
         "compile": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
@@ -58,93 +77,43 @@
       },
       "System.Memory/4.5.3": {
         "type": "package",
-        "dependencies": {
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.4.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Memory.dll": {}
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {}
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Numerics.Vectors.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
-        }
-      },
-      "System.Runtime.CompilerServices.Unsafe/4.6.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
-        }
-      },
-      "System.Text.Encodings.Web/4.6.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Memory": "4.5.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Text.Json/4.6.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
-          "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.3",
-          "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.6.0",
-          "System.Text.Encodings.Web": "4.6.0",
-          "System.Threading.Tasks.Extensions": "4.5.2"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Text.Json.dll": {}
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Json.dll": {}
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.2": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
         "compile": {
-          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+          "lib/netcoreapp2.1/_._": {}
         }
       }
     }
   },
   "libraries": {
-<<<<<<< HEAD
-    "docfx/2.53.1": {
-      "sha512": "QKxrcs+bd7p6hLQqNLdq1jwGPwjl/IjJ9FovhpEw28GM2eIIInA5292g87SHZTWBunRQrtuumxE9jVzufLcrVg==",
-      "type": "package",
-      "path": "docfx/2.53.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "docfx.2.53.1.nupkg.sha512",
-        "docfx.nuspec",
-        "lib/net472/docfx.exe"
-=======
     "Azure.AI.TextAnalytics/1.0.0-preview.5": {
       "sha512": "kS3uE6hr+OIUFa4RzQfI5OMgPbcp/Zy/ZSw5RrJUB8ddHZTeOi0oozf0/EP0UzisL+POKVKoUUquwv2uZPpP/Q==",
       "type": "package",
@@ -177,6 +146,137 @@
         "pkgicon.png"
       ]
     },
+    "docfx/2.53.1": {
+      "sha512": "QKxrcs+bd7p6hLQqNLdq1jwGPwjl/IjJ9FovhpEw28GM2eIIInA5292g87SHZTWBunRQrtuumxE9jVzufLcrVg==",
+      "type": "package",
+      "path": "docfx/2.53.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docfx.2.53.1.nupkg.sha512",
+        "docfx.nuspec",
+        "lib/net472/docfx.exe"
+      ]
+    },
+    "docfx.console/2.54.0": {
+      "sha512": "YETM5uS8ki/8I9z52+CSxZpffRo8XMt6zx57i+DkrRjEvE5gszqUH7huDcEWGvbcZnMv1Qf8/My4J1YyZvl1Hw==",
+      "type": "package",
+      "path": "docfx.console/2.54.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/docfx.console.targets",
+        "content/api/index.md",
+        "content/articles/intro.md",
+        "content/articles/toc.md",
+        "content/docfx.json",
+        "content/index.md",
+        "content/toc.yml",
+        "docfx.console.2.54.0.nupkg.sha512",
+        "docfx.console.nuspec",
+        "tools/AutoMapper.dll",
+        "tools/CommandLine.dll",
+        "tools/DotLiquid.dll",
+        "tools/Dotnet.ProjInfo.Helpers.dll",
+        "tools/Dotnet.ProjInfo.dll",
+        "tools/FSharp.Compiler.Service.MSBuild.v12.dll",
+        "tools/FSharp.Compiler.Service.dll",
+        "tools/FSharp.Core.dll",
+        "tools/HtmlAgilityPack.dll",
+        "tools/Jint.dll",
+        "tools/Markdig.dll",
+        "tools/Microsoft.Build.Engine.dll",
+        "tools/Microsoft.Build.Framework.dll",
+        "tools/Microsoft.Build.Locator.dll",
+        "tools/Microsoft.Build.Tasks.v12.0.dll",
+        "tools/Microsoft.Build.Utilities.v12.0.dll",
+        "tools/Microsoft.Build.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.Features.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
+        "tools/Microsoft.CodeAnalysis.CSharp.dll",
+        "tools/Microsoft.CodeAnalysis.Features.dll",
+        "tools/Microsoft.CodeAnalysis.FlowAnalysis.Utilities.dll",
+        "tools/Microsoft.CodeAnalysis.VisualBasic.Features.dll",
+        "tools/Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll",
+        "tools/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "tools/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll",
+        "tools/Microsoft.CodeAnalysis.Workspaces.dll",
+        "tools/Microsoft.CodeAnalysis.dll",
+        "tools/Microsoft.DiaSymReader.dll",
+        "tools/Microsoft.DocAsCode.Build.Common.dll",
+        "tools/Microsoft.DocAsCode.Build.ConceptualDocuments.dll",
+        "tools/Microsoft.DocAsCode.Build.Engine.dll",
+        "tools/Microsoft.DocAsCode.Build.ManagedReference.dll",
+        "tools/Microsoft.DocAsCode.Build.OverwriteDocuments.dll",
+        "tools/Microsoft.DocAsCode.Build.ResourceFiles.dll",
+        "tools/Microsoft.DocAsCode.Build.RestApi.dll",
+        "tools/Microsoft.DocAsCode.Build.SchemaDriven.dll",
+        "tools/Microsoft.DocAsCode.Build.TableOfContents.dll",
+        "tools/Microsoft.DocAsCode.Build.UniversalReference.dll",
+        "tools/Microsoft.DocAsCode.Common.dll",
+        "tools/Microsoft.DocAsCode.DataContracts.Common.dll",
+        "tools/Microsoft.DocAsCode.DataContracts.ManagedReference.dll",
+        "tools/Microsoft.DocAsCode.DataContracts.RestApi.dll",
+        "tools/Microsoft.DocAsCode.DataContracts.UniversalReference.dll",
+        "tools/Microsoft.DocAsCode.Dfm.dll",
+        "tools/Microsoft.DocAsCode.Glob.dll",
+        "tools/Microsoft.DocAsCode.HtmlToPdf.dll",
+        "tools/Microsoft.DocAsCode.MarkdigEngine.Extensions.dll",
+        "tools/Microsoft.DocAsCode.MarkdigEngine.Validators.dll",
+        "tools/Microsoft.DocAsCode.MarkdigEngine.dll",
+        "tools/Microsoft.DocAsCode.MarkdownLite.dll",
+        "tools/Microsoft.DocAsCode.Metadata.ManagedReference.Common.dll",
+        "tools/Microsoft.DocAsCode.Metadata.ManagedReference.FSharp.dll",
+        "tools/Microsoft.DocAsCode.Metadata.ManagedReference.Roslyn.dll",
+        "tools/Microsoft.DocAsCode.Metadata.ManagedReference.dll",
+        "tools/Microsoft.DocAsCode.Plugins.dll",
+        "tools/Microsoft.DocAsCode.YamlSerialization.dll",
+        "tools/Microsoft.Owin.Diagnostics.dll",
+        "tools/Microsoft.Owin.FileSystems.dll",
+        "tools/Microsoft.Owin.Host.HttpListener.dll",
+        "tools/Microsoft.Owin.Hosting.dll",
+        "tools/Microsoft.Owin.StaticFiles.dll",
+        "tools/Microsoft.Owin.dll",
+        "tools/Microsoft.VisualStudio.RemoteControl.dll",
+        "tools/Microsoft.VisualStudio.Utilities.Internal.dll",
+        "tools/Newtonsoft.Json.Schema.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/NuGet.Common.dll",
+        "tools/NuGet.Configuration.dll",
+        "tools/NuGet.DependencyResolver.Core.dll",
+        "tools/NuGet.Frameworks.dll",
+        "tools/NuGet.LibraryModel.dll",
+        "tools/NuGet.Packaging.Core.Types.dll",
+        "tools/NuGet.Packaging.Core.dll",
+        "tools/NuGet.Packaging.dll",
+        "tools/NuGet.ProjectModel.dll",
+        "tools/NuGet.Protocol.dll",
+        "tools/NuGet.Versioning.dll",
+        "tools/Nustache.Core.dll",
+        "tools/Owin.dll",
+        "tools/SQLitePCLRaw.core.dll",
+        "tools/System.Buffers.dll",
+        "tools/System.Collections.Immutable.dll",
+        "tools/System.Composition.AttributedModel.dll",
+        "tools/System.Composition.Convention.dll",
+        "tools/System.Composition.Hosting.dll",
+        "tools/System.Composition.Runtime.dll",
+        "tools/System.Composition.TypedParts.dll",
+        "tools/System.Memory.dll",
+        "tools/System.Numerics.Vectors.dll",
+        "tools/System.Reflection.Metadata.dll",
+        "tools/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/System.Text.Encoding.CodePages.dll",
+        "tools/System.Threading.Tasks.Dataflow.dll",
+        "tools/System.Threading.Tasks.Extensions.dll",
+        "tools/System.ValueTuple.dll",
+        "tools/YamlDotNet.dll",
+        "tools/docfx.exe",
+        "tools/docfx.exe.config",
+        "tools/itextsharp.dll"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
       "sha512": "K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
       "type": "package",
@@ -199,150 +299,6 @@
         "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
->>>>>>> Mauricio
-      ]
-    },
-    "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
-      "type": "package",
-      "path": "microsoft.netcore.platforms/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-        "microsoft.netcore.platforms.nuspec",
-        "runtime.json"
-      ]
-    },
-    "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
-      "type": "package",
-      "path": "netstandard.library/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "build/netstandard2.0/NETStandard.Library.targets",
-        "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
-        "build/netstandard2.0/ref/System.AppContext.dll",
-        "build/netstandard2.0/ref/System.Collections.Concurrent.dll",
-        "build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
-        "build/netstandard2.0/ref/System.Collections.Specialized.dll",
-        "build/netstandard2.0/ref/System.Collections.dll",
-        "build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
-        "build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
-        "build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
-        "build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
-        "build/netstandard2.0/ref/System.ComponentModel.dll",
-        "build/netstandard2.0/ref/System.Console.dll",
-        "build/netstandard2.0/ref/System.Core.dll",
-        "build/netstandard2.0/ref/System.Data.Common.dll",
-        "build/netstandard2.0/ref/System.Data.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.Process.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
-        "build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
-        "build/netstandard2.0/ref/System.Drawing.Primitives.dll",
-        "build/netstandard2.0/ref/System.Drawing.dll",
-        "build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
-        "build/netstandard2.0/ref/System.Globalization.Calendars.dll",
-        "build/netstandard2.0/ref/System.Globalization.Extensions.dll",
-        "build/netstandard2.0/ref/System.Globalization.dll",
-        "build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
-        "build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
-        "build/netstandard2.0/ref/System.IO.Compression.dll",
-        "build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
-        "build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
-        "build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
-        "build/netstandard2.0/ref/System.IO.FileSystem.dll",
-        "build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
-        "build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
-        "build/netstandard2.0/ref/System.IO.Pipes.dll",
-        "build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
-        "build/netstandard2.0/ref/System.IO.dll",
-        "build/netstandard2.0/ref/System.Linq.Expressions.dll",
-        "build/netstandard2.0/ref/System.Linq.Parallel.dll",
-        "build/netstandard2.0/ref/System.Linq.Queryable.dll",
-        "build/netstandard2.0/ref/System.Linq.dll",
-        "build/netstandard2.0/ref/System.Net.Http.dll",
-        "build/netstandard2.0/ref/System.Net.NameResolution.dll",
-        "build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
-        "build/netstandard2.0/ref/System.Net.Ping.dll",
-        "build/netstandard2.0/ref/System.Net.Primitives.dll",
-        "build/netstandard2.0/ref/System.Net.Requests.dll",
-        "build/netstandard2.0/ref/System.Net.Security.dll",
-        "build/netstandard2.0/ref/System.Net.Sockets.dll",
-        "build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
-        "build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
-        "build/netstandard2.0/ref/System.Net.WebSockets.dll",
-        "build/netstandard2.0/ref/System.Net.dll",
-        "build/netstandard2.0/ref/System.Numerics.dll",
-        "build/netstandard2.0/ref/System.ObjectModel.dll",
-        "build/netstandard2.0/ref/System.Reflection.Extensions.dll",
-        "build/netstandard2.0/ref/System.Reflection.Primitives.dll",
-        "build/netstandard2.0/ref/System.Reflection.dll",
-        "build/netstandard2.0/ref/System.Resources.Reader.dll",
-        "build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
-        "build/netstandard2.0/ref/System.Resources.Writer.dll",
-        "build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
-        "build/netstandard2.0/ref/System.Runtime.Extensions.dll",
-        "build/netstandard2.0/ref/System.Runtime.Handles.dll",
-        "build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
-        "build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
-        "build/netstandard2.0/ref/System.Runtime.Numerics.dll",
-        "build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
-        "build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
-        "build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
-        "build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
-        "build/netstandard2.0/ref/System.Runtime.Serialization.dll",
-        "build/netstandard2.0/ref/System.Runtime.dll",
-        "build/netstandard2.0/ref/System.Security.Claims.dll",
-        "build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
-        "build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
-        "build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
-        "build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
-        "build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
-        "build/netstandard2.0/ref/System.Security.Principal.dll",
-        "build/netstandard2.0/ref/System.Security.SecureString.dll",
-        "build/netstandard2.0/ref/System.ServiceModel.Web.dll",
-        "build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
-        "build/netstandard2.0/ref/System.Text.Encoding.dll",
-        "build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
-        "build/netstandard2.0/ref/System.Threading.Overlapped.dll",
-        "build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
-        "build/netstandard2.0/ref/System.Threading.Tasks.dll",
-        "build/netstandard2.0/ref/System.Threading.Thread.dll",
-        "build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
-        "build/netstandard2.0/ref/System.Threading.Timer.dll",
-        "build/netstandard2.0/ref/System.Threading.dll",
-        "build/netstandard2.0/ref/System.Transactions.dll",
-        "build/netstandard2.0/ref/System.ValueTuple.dll",
-        "build/netstandard2.0/ref/System.Web.dll",
-        "build/netstandard2.0/ref/System.Windows.dll",
-        "build/netstandard2.0/ref/System.Xml.Linq.dll",
-        "build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
-        "build/netstandard2.0/ref/System.Xml.Serialization.dll",
-        "build/netstandard2.0/ref/System.Xml.XDocument.dll",
-        "build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
-        "build/netstandard2.0/ref/System.Xml.XPath.dll",
-        "build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
-        "build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
-        "build/netstandard2.0/ref/System.Xml.dll",
-        "build/netstandard2.0/ref/System.dll",
-        "build/netstandard2.0/ref/mscorlib.dll",
-        "build/netstandard2.0/ref/netstandard.dll",
-        "build/netstandard2.0/ref/netstandard.xml",
-        "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.3.nupkg.sha512",
-        "netstandard.library.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
@@ -467,52 +423,6 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.6.0": {
-      "sha512": "HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
-      "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
-        "system.runtime.compilerservices.unsafe.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Text.Encodings.Web/4.6.0": {
-      "sha512": "BXgFO8Yi7ao7hVA/nklD0Hre1Bbce048ZqryGZVFifGNPuh+2jqF1i/jLJLMfFGZIzUOw+nCIeH24SQhghDSPw==",
-      "type": "package",
-      "path": "system.text.encodings.web/4.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp3.0/System.Text.Encodings.Web.dll",
-        "lib/netcoreapp3.0/System.Text.Encodings.Web.xml",
-        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
-        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
-        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
-        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.4.6.0.nupkg.sha512",
-        "system.text.encodings.web.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Text.Json/4.6.0": {
       "sha512": "4F8Xe+JIkVoDJ8hDAZ7HqLkjctN/6WItJIzQaifBwClC7wmoLSda/Sv2i6i1kycqDb3hWF4JCVbpAweyOKHEUA==",
       "type": "package",
@@ -571,53 +481,35 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.0": [
-<<<<<<< HEAD
-      "NETStandard.Library >= 2.0.3",
-      "docfx >= 2.53.1"
-=======
+    ".NETCoreApp,Version=v3.1": [
       "Azure.AI.TextAnalytics >= 1.0.0-preview.5",
-      "NETStandard.Library >= 2.0.3"
->>>>>>> Mauricio
+      "docfx >= 2.53.1",
+      "docfx.console >= 2.54.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mariana.roso\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\FIT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\mariana.roso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
-      "projectName": "Library",
-      "projectPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
+      "projectPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj",
       "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
->>>>>>> Mauricio
+      "outputPath": "C:\\Users\\FIT\\repos\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mariana.roso\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netstandard2.0"
+        "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp3.1": {
           "projectReferences": {}
         }
       },
@@ -628,21 +520,19 @@
       }
     },
     "frameworks": {
-      "netstandard2.0": {
+      "netcoreapp3.1": {
         "dependencies": {
           "Azure.AI.TextAnalytics": {
             "target": "Package",
             "version": "[1.0.0-preview.5, )"
           },
-          "NETStandard.Library": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[2.0.3, )",
-            "autoReferenced": true
-          },
           "docfx": {
             "target": "Package",
             "version": "[2.53.1, )"
+          },
+          "docfx.console": {
+            "target": "Package",
+            "version": "[2.54.0, )"
           }
         },
         "imports": [
@@ -655,7 +545,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -664,10 +559,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"docfx 2.53.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "El paquete \"docfx 2.53.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "docfx",
       "targetGraphs": [
-        ".NETStandard,Version=v2.0"
+        ".NETCoreApp,Version=v3.1"
       ]
     }
   ]
