@@ -5,6 +5,9 @@ namespace Library
 /// <summary>
 /// La clase MercadoLibre implementa ITienda en este caso utilizando MercadoLibre para procesar el resultado de la comunicacion
 /// con la APi de MercadoLibre. Nos interesa obtener de esa Tienda una Lista de objetos Regalo.
+/// 
+/// Esta clase no forma parte de nuestro CORE por lo que se desarrollará cuando tengamos más conocimiento de como
+/// se interactúa con la API de MercadoLibre. 
 /// </summary>
    
     public class MercadoLibre : ITienda

@@ -2,7 +2,11 @@ using System.Collections.Generic;
 namespace Library
 {
 /// <summary>
-/// La clase TaggerMensajes implementa ComponenteBase, con etiquetas define el tipo de interacción.
+/// La clase TaggerMensajes hereda de ComponenteBase,lo utilizamos como componente utilizado por 
+/// el Controlador (nuestro Mediador) para ser parte de un flujo de ejecuciones ordenado y sin tantas comunicaciones 
+/// entre clases.
+/// Su Función es tomar el input recibido en la plataforma para con él conformar un mensaje utilizando el Patrón Creeator.
+/// 
 /// </summary>
     public class TaggerMensajes: ComponenteBase
     {

@@ -3,16 +3,13 @@ namespace Library
 {
 
 /// <summary>
-/// La clase Mensaje contiene todo lo correspondiente a los mensajes intercambiados con el usuario.
-/// Setea el tipo, obtiene las frases clave y si son frases nuevas las agrega.
+/// La clase Mensaje es creada dentro de TaggerMensaje, esta se conforma por la informacion necesaria para interpretar
+/// que tipo de interaccion se está recibiendo por parte del Usuario para luego evaluar su contenido y tomar diferentes 
+/// acciones.
 /// </summary>
     public class Mensaje
     {
 
-/// <summary>
-/// Aplicamos patrón Expert, ya que el dueño de los datos que es Mensaje setea todos los datos porque tiene toda la información
-/// disponible para ello y es su responsabilidad
-/// </summary>
         private string contenido;
         private TipoMensaje tipo;
         private List<string> frasesClave = new List<string>();

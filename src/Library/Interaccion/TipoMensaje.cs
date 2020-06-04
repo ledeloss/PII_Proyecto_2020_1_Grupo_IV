@@ -1,8 +1,10 @@
 namespace Library
 {
-/// <summary>
-/// TipoMensaje define todos los posibles valores fijos del tipo de mensaje.
-/// </summary>
+
+    /// <summary>
+    /// TipoMensaje define todos los valores que aceptamos como categorías de interacciones Entrantes 
+    /// desde la Plataforma , TaggerMensajes será el que se encargue de categorizar en uno de estos tipos al contenido entrante.
+    /// </summary>
     public enum TipoMensaje
     {
         Numero,

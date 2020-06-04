@@ -2,12 +2,32 @@ using System;
 namespace Library
 {
 /// <summary>
-/// La clase PreguntasOrdenAleatorio implementa la interfase IGeneradorPreguntas. Implementando su metodo reutilizando codigo y evitando depender
-/// de clases intermedias.
-/// Se encarga de que las preguntas no sean arrojadas siempre en el mismo orden.
+/// La clase PreguntasOrdenAleatorio implementa la interfase IGeneradorPreguntas parea definir 
+/// el orden en que le enviamos las preguntas que tenemos pendientes para completar el Perfil de los usuarios. 
+/// La idea de esta clase concreta es que cada pregunta que se realice sea de forma aleatoria (para que 
+/// el flujo de interacción no sea siempre tan lineal).
+/// 
+/// Al utilizar la abstraccion, podriamos eventualmente crear otra clase concreta que Realice las preguntas en otro 
+/// órden sin realizar demasiadas modificaciones.
 /// </summary>
     public class PreguntasOrdenAleatorio : IGeneradorPreguntas
     {
+        /// <summary>
+        /// Esta lista de preguntados tiene el fin de almacenar cuales de las preguntas ya fueron realizadas y cuales estan 
+        /// pendientes.
+        /// Los posibles valores que tendrá  en cada posición será 0 o 1.
+        /// 
+        /// Se inicializa con cinco ceros (cada cero identifica que una pregunta no fue realizada aún)
+        /// Las posiciones de la lista están dispuestas de la siguiente manera: 
+        /// [edad, genero, precioMin, precioMax, intereses]
+        /// 
+        /// Por ejemplo: 
+        /// -Si preguntados[0,1,1,1,1] tiene esta forma significa que ya hemos 
+        /// preguntado todo menos la edad (primera posicion de la lista equivale a la edad y tiene un cero).
+        ///-Si preguntados[0,1,0,0,1] tiene esta forma significa que ya hemos 
+        /// preguntado el genero y también los intereses.
+        /// </summary>
+        /// <value></value>
         protected int[] preguntados = new int[5]
         {
             0,
@@ -16,8 +36,15 @@ namespace Library
             0,
             0
         };
-        //[edad, genero, precioMin, precioMax, intereses]
+        
         private int ultimoPreguntado = -1;
+        /// <summary>
+        /// Para definir cual es la siguiente pregunta a realizar, se realiza de forma Aleatoria
+        ///  pero con algunas consideraciones como ser: 
+        /// Cuando se pregunta aleatoria es alguno de los precios (Maximo o Minimo) la seguiente pregunta debe ser también de precio
+        /// para que ambas preguntas estén siempre juntas.  
+        /// </summary>
+        /// <returns></returns>
         public TipoEnvio GetSiguientePregunta()
         {
              if ((this.ultimoPreguntado == 3) && (preguntados[2] == 0))

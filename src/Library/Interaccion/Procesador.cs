@@ -4,9 +4,8 @@ using System.Collections.Generic;
 namespace Library
 {
 
-    /* Clase que se encarga de procesar los mensajes con el Usuario, revisa las reglas configuradas 
-    para saber los tipos de interacciones esperados, tambien genera los filtros especifiocs necesarios para interactuar 
-    con las Tiendas como MercaoLibre o Amazon.
+    /* Procesador es una clase de la cual se heredarán otras clases como por ejemplo 
+     para vincular una determinada Plataforma (En este caso una abrstraccion IPlataforma)
     */
     public class Procesador : IProcesador
     {

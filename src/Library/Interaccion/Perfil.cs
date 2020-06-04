@@ -4,7 +4,9 @@ using System.Collections.Generic;
 namespace Library
 {
 /// <summary>
-/// La clase Perfil se encarga de generar el perfil del usuario: su genero, edad, una lista de intereses, precio minimo y precio maximo.
+/// La clase Perfil es la que va a contener la informacion que necesitamos como ser: genero, edad, una lista de intereses, precio minimo y precio maximo.
+///  para posteriormente realizar las busquedas en las Tiendas como MercadLibre.
+/// Esta es creada por la clase GerneradorPerfil Aplicando Patrón Creator. 
 /// </summary>
     public class Perfil
     {
