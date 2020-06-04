@@ -4,15 +4,19 @@ using System.Collections.Generic;
 namespace Library
 {
 
-/// <summary>
-/// La clase GeneradorPerfil será la encargada de generar un perfil de usuario.
-/// Implementa ComponenteBase lo cual nos permite reutilizar código
-/// </summary>
+    /// <summary>
+    /// La clase GeneradorPerfil será la encargada de crear un objeto Perfil que luego sera necesario para la Busqueda de articulos 
+    /// en las Tiendas como MercadoLibre.
+    /// Esta Clase hereda de ComponenteBase lo cual mediante la abstraccion facilita la reutilizacion de código interactuando
+    /// con la Clase Controlador (nuestro Mediador) y reduciendo el acoplamiento con el resto de las clases que intervienen en 
+    /// el flujo.
+    /// 
+    /// </summary>
     public class GeneradorPerfil : ComponenteBase
     {
         private IGeneradorPreguntas pregunta;
         private Perfil persona = new Perfil ();
-        public void SetGeneradorPreguntas(IGeneradorPreguntas generador)
+        public void SetGeneradorPreguntas (IGeneradorPreguntas generador)
         {
             this.pregunta = generador;
         }
@@ -21,11 +25,13 @@ namespace Library
             return this.persona;
         }
 
-/// <summary>
-/// Este metodo setea la edad, primero convierte el string que nos llega en un entero capturando la excepcion que puede llegar a dar.
-/// Conjuntamente clasifica a cada rango de edad en una generacion
-/// </summary>
-/// <param name="stringEdad"></param>
+        /// <summary>
+        /// Este metodo setea la edad, primero convierte el string que nos llega en un entero capturando la excepcion que puede llegar a dar.
+        /// Conjuntamente clasifica a cada rango de edad en una generacion.
+        /// Para esta entrega no tenemos Excepciones propias ,por lo que podran observar que en los bloques de 
+        /// try,catch no se indican que tipo de Excepcion manejamos ,esto se deja pendiente para avanzar en la siguiente entrega.
+        /// </summary>
+        /// <param name="stringEdad"></param>
         public void SetEdad (string stringEdad)
         {
             //Se declara una edad estándar para evitar problemas de compilación
@@ -109,9 +115,8 @@ namespace Library
             }
         }
 
-
         public void SetPrecioMaximo (string precioMax)
-        { 
+        {
             try
             {
                 int valor = Int32.Parse (precioMax);
@@ -142,13 +147,13 @@ namespace Library
         {
             persona.AddInteres (interes);
         }
-/// <summary>
-/// Metodo que setea el genero si el usuario no desea especificarlo, este será "desconocido"
-/// </summary>
-/// <param name="genero"></param>
+        /// <summary>
+        /// Metodo que setea el genero si el usuario no desea especificarlo, este será "desconocido"
+        /// </summary>
+        /// <param name="genero"></param>
         public void SetGenero (string genero)
         {
-            switch (genero.ToLower())
+            switch (genero.ToLower ())
             {
                 case "femenino":
                     persona.Genero = TipoGenero.Femenino;
@@ -165,10 +170,13 @@ namespace Library
 
             }
         }
-
+        /// <summary>
+        /// El Procesamiento de Preguntas se separa para que tenga unicamente dicha Responsabilidad aplicando SRP.
+        /// </summary>
+        /// <returns></returns>
         public TipoEnvio getDatoFaltante ()
         {
-           return this.pregunta.GetSiguientePregunta();
+            return this.pregunta.GetSiguientePregunta ();
         }
 
     }

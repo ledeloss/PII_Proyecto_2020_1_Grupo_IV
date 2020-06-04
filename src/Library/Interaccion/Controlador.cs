@@ -4,9 +4,12 @@ namespace Library
 {
 
 /// <summary>
-/// La clase controlador se encarga de manejar la interaccion entre el usuario y el bot. Maneja los mensajes entre ambos.
-/// Hereda de IMediador lo que nos permite reutilizar codigo, resulta util ya que esta interfaz contiene el metodo notificar que vamos a reutilizar
-/// en la interaccion antes mencionada.
+/// Controlador : Esta e una clase compuesta  que permite mediante sus componentes (heredeados de ComponenteBase) manejar 
+/// el flujo de los diferentes objetos involucrados (TaggerMensajes,Respuesta,GeneradorPerfil,etc) 
+/// 
+/// Decidimos utilizar el Patron Mediator para que la comunicacion entre las diferentes clases se presente de 
+/// una forma independiente entre si (reduciendo su acoplamiento), para manejar el Flujo de la aplicacion de una 
+/// forma mas clara, mas mantenible y aprovechar la estructura para reutilizar codigo.
 /// </summary>
     public class Controlador : IMediador
     {
