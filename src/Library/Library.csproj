@@ -1,13 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="docfx" Version="2.53.1"/>
+    <PackageReference Include="docfx.console" Version="2.54.0"/>
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Azure.AI.TextAnalytics" Version="1.0.0-preview.5" />
+    <PackageReference Include="Azure.AI.TextAnalytics" Version="1.0.0-preview.5"/>
   </ItemGroup>
-
 </Project>

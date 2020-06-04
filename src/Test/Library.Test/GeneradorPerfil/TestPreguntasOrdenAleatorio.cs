@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using NUnit.Framework;
 
 namespace Library.Test.GeneradorPerfil
@@ -17,7 +17,7 @@ namespace Library.Test.GeneradorPerfil
 
         [Test]
 
-        public void TestValidoSiPerfilCompletoDevuelvePerfilSugerencia ()
+        public void TestValidoSiPerfilCompletoDevuelvePerfilSugerencia ()docfx
         {
             Library.GeneradorPerfil generadorPerfil = new GeneradorPerfilStub (1, 0, 1, 1, 1);
             Assert.AreEqual (generadorPerfil.getDatoFaltante (), TipoEnvio.Genero);
@@ -61,3 +61,5 @@ namespace Library.Test.GeneradorPerfil
 
     }
 }
+
+*/
