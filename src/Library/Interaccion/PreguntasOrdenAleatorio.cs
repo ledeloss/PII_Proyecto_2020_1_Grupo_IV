@@ -17,7 +17,7 @@ namespace Library
             0
         };
         //[edad, genero, precioMin, precioMax, intereses]
-        private int ultimoPreguntado = -1;
+        protected int ultimoPreguntado = -1;
         public TipoEnvio GetSiguientePregunta()
         {
              if ((this.ultimoPreguntado == 3) && (preguntados[2] == 0))
