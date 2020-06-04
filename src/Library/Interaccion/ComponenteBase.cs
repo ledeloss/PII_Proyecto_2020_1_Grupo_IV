@@ -1,9 +1,9 @@
 namespace Library
 {
 /// <summary>
-/// La clase ComponenteBase sera la encargada de setear un mediador que luego será utilizado por el generador de perfil, 
-/// para generar un perfil de usuario.
-/// Buscamos bajar el acoplamiento creando ComponenteBase para eviar la dependencia directa del GeneradorPerfil con Mediador.
+/// ComponeneBase : Es una clase de la cual se heredaran los comportamientos necesarios para implementar el Patron Mediator.
+/// Las clases que herdean de esta clase ComponenteBase van a componer a la Clase Compuesta Controlador (nuestro Mediador)
+/// Manejarlo de esta manera permite que el mediador pueda eventualemte agregar nuevos componentes permitiendo la Extension.
 /// </summary>
     public class ComponenteBase
     {
