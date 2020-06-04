@@ -28,15 +28,17 @@ namespace Library
 /// <param name="stringEdad"></param>
         public void SetEdad (string stringEdad)
         {
+            //Se declara una edad estándar para evitar problemas de compilación
+            int edad = 30;
             
             try
             {
-                int edad = Int32.Parse (stringEdad);
+                edad = Int32.Parse (stringEdad);
                 this.ValidarEdad (edad);
             }
             catch
             {
-
+                //Agregar excepciones de Parse y de validación de edad
             }
             if (edad == 0)
             {

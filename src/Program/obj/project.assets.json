@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-<<<<<<< HEAD
-      "docfx/2.53.1": {
-        "type": "package",
-        "compile": {
-          "lib/net472/docfx.exe": {}
-        },
-        "runtime": {
-          "lib/net472/docfx.exe": {}
-=======
       "Azure.AI.TextAnalytics/1.0.0-preview.5": {
         "type": "package",
         "dependencies": {
@@ -40,6 +31,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Core.dll": {}
+        }
+      },
+      "docfx/2.53.1": {
+        "type": "package",
+        "compile": {
+          "lib/net472/docfx.exe": {}
+        },
+        "runtime": {
+          "lib/net472/docfx.exe": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
@@ -103,18 +103,14 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
->>>>>>> Mauricio
         }
       },
       "Library/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-<<<<<<< HEAD
+          "Azure.AI.TextAnalytics": "1.0.0-preview.5",
           "docfx": "2.53.1"
-=======
-          "Azure.AI.TextAnalytics": "1.0.0-preview.5"
->>>>>>> Mauricio
         },
         "compile": {
           "bin/placeholder/Library.dll": {}
@@ -126,18 +122,6 @@
     }
   },
   "libraries": {
-<<<<<<< HEAD
-    "docfx/2.53.1": {
-      "sha512": "QKxrcs+bd7p6hLQqNLdq1jwGPwjl/IjJ9FovhpEw28GM2eIIInA5292g87SHZTWBunRQrtuumxE9jVzufLcrVg==",
-      "type": "package",
-      "path": "docfx/2.53.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "docfx.2.53.1.nupkg.sha512",
-        "docfx.nuspec",
-        "lib/net472/docfx.exe"
-=======
     "Azure.AI.TextAnalytics/1.0.0-preview.5": {
       "sha512": "kS3uE6hr+OIUFa4RzQfI5OMgPbcp/Zy/ZSw5RrJUB8ddHZTeOi0oozf0/EP0UzisL+POKVKoUUquwv2uZPpP/Q==",
       "type": "package",
@@ -168,6 +152,18 @@
         "lib/netstandard2.0/Azure.Core.dll",
         "lib/netstandard2.0/Azure.Core.xml",
         "pkgicon.png"
+      ]
+    },
+    "docfx/2.53.1": {
+      "sha512": "QKxrcs+bd7p6hLQqNLdq1jwGPwjl/IjJ9FovhpEw28GM2eIIInA5292g87SHZTWBunRQrtuumxE9jVzufLcrVg==",
+      "type": "package",
+      "path": "docfx/2.53.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docfx.2.53.1.nupkg.sha512",
+        "docfx.nuspec",
+        "lib/net472/docfx.exe"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
@@ -370,7 +366,6 @@
         "system.threading.tasks.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
->>>>>>> Mauricio
       ]
     },
     "Library/1.0.0": {
@@ -386,50 +381,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mariana.roso\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\FIT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
+      "projectUniqueName": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
       "projectName": "Program",
-      "projectPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
-      "packagesPath": "C:\\Users\\mariana.roso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
-      "projectName": "Program",
-      "projectPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
+      "projectPath": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\Program.csproj",
       "packagesPath": "C:\\Users\\FIT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
->>>>>>> Mauricio
+      "outputPath": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Program\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\mariana.roso\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\FIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
-              "projectPath": "C:\\Users\\mariana.roso\\AppData\\Local\\GitHubDesktop\\app-2.4.0\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
-=======
-            "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
-              "projectPath": "C:\\Users\\FIT\\Documents\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
->>>>>>> Mauricio
+            "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\FIT\\Documents\\P2\\Proyecto\\PII_Proyecto_2020_1_Grupo_IV\\src\\Library\\Library.csproj"
             }
           }
         }
@@ -463,7 +439,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
