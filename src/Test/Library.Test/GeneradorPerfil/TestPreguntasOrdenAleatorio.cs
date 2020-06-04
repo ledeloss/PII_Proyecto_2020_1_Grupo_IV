@@ -3,14 +3,15 @@ using NUnit.Framework;
 
 namespace Library.Test.GeneradorPerfil
 {
-    public class TestGeneradorPerfilDatos
+    public class TestPreguntasOrdenAleatorio
     {
 
         [Test]
 
         public void TestCompletoDevuelveTrue ()
         {   //[edad, genero, precioMin, precioMax, intereses]
-            Library.GeneradorPerfil generadorPerfil = new GeneradorPerfilStub (1, 1, 1, 1, 1);
+            PreguntasOrdenAleatorio preguntas = new PreguntasOrdenAleatorio();
+            preguntas.
             Assert.AreEqual (generadorPerfil.IsPerfilCompleto (), true);
         }
 

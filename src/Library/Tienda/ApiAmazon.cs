@@ -1,10 +1,10 @@
 namespace Library
 {
+/// <summary>
+/// La clase ApiAmazon brinda acceso al sitio Amazon.
+/// </summary>
     public class ApiAmazon
     {
-        /*
-        Clase que brinda acceso al sitio Amazon.
-        Funciona en modo Singleton, para garantizar un único acceso al sitio.
-        */
+        
     }
 }

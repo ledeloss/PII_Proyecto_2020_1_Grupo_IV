@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Library
 {
-
-    /* Clase que genera la respuesta dependiendo el tipo de interaccion que tenga el usuario con el bot
-        Se le da esta responsabiliadad para aplicar el Principio de SRP, inicialmente esto lo iba a hacer el mismo
-        Procesador pero decidimos generar esta nueva clase y asignarle esta responsabilidad.
-    */
+/// <summary>
+/// La clase Respuesta genera la respuesta dependiendo del tipo de interacción que tenga el usuario con el bot.
+/// Le asignamos la responsabilidad a respuesta teniendo un solo tipo de cambio, ya que en principio el tipo de respuesta seran mensajes,
+/// aplicamos SRP.
+/// </summary>
     public class Respuesta: ComponenteBase
     {
         

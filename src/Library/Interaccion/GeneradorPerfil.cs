@@ -3,29 +3,35 @@ using System.Collections.Generic;
 
 namespace Library
 {
+
+/// <summary>
+/// La clase GeneradorPerfil será la encargada de generar un perfil de usuario.
+/// Implementa ComponenteBase lo cual nos permite reutilizar código
+/// </summary>
     public class GeneradorPerfil : ComponenteBase
     {
-        protected int[] preguntados = new int[5]
-        {
-            0,
-            0,
-            0,
-            0,
-            0
-        };
-        //[edad, genero, precioMin, precioMax, intereses]
-        private int ultimoPreguntado = -1;
+        private IGeneradorPreguntas pregunta;
         private Perfil persona = new Perfil ();
+        public void SetGeneradorPreguntas(IGeneradorPreguntas generador)
+        {
+            this.pregunta = generador;
+        }
         public Perfil GetPersona ()
         {
             return this.persona;
         }
 
+/// <summary>
+/// Este metodo setea la edad, primero convierte el string que nos llega en un entero capturando la excepcion que puede llegar a dar.
+/// Conjuntamente clasifica a cada rango de edad en una generacion
+/// </summary>
+/// <param name="stringEdad"></param>
         public void SetEdad (string stringEdad)
         {
-            int edad = Int32.Parse (stringEdad);
+            
             try
             {
+                int edad = Int32.Parse (stringEdad);
                 this.ValidarEdad (edad);
             }
             catch
@@ -96,15 +102,17 @@ namespace Library
         {
             if (edad < 0 || edad > 120)
             {
+                //no implementamos la excepcion que capturamos pero entendemos que debe arrojarla dadas estas condiciones
                 throw new NotImplementedException ();
             }
         }
 
+
         public void SetPrecioMaximo (string precioMax)
-        {
-            int valor = Int32.Parse (precioMax);
+        { 
             try
             {
+                int valor = Int32.Parse (precioMax);
                 persona.PrecioMax = valor;
 
             }
@@ -116,9 +124,9 @@ namespace Library
 
         public void SetPrecioMinimo (string precioMin)
         {
-            int valor = Int32.Parse (precioMin);
             try
             {
+                int valor = Int32.Parse (precioMin);
                 persona.PrecioMin = valor;
 
             }
@@ -132,7 +140,10 @@ namespace Library
         {
             persona.AddInteres (interes);
         }
-
+/// <summary>
+/// Metodo que setea el genero si el usuario no desea especificarlo, este será "desconocido"
+/// </summary>
+/// <param name="genero"></param>
         public void SetGenero (string genero)
         {
             switch (genero.ToLower())
@@ -155,69 +166,8 @@ namespace Library
 
         public TipoEnvio getDatoFaltante ()
         {
-            if ((this.ultimoPreguntado == 3) && (preguntados[2] == 0))
-            {
-                ActualizarPreguntados (2);
-                return TipoEnvio.PrecioMin;
-            }
-            else
-            {
-                if (this.ultimoPreguntado == 2 && (preguntados[3] == 0))
-                {
-                    ActualizarPreguntados (3);
-                    return TipoEnvio.PrecioMax;
-                }
-            }
-            Random rnd = new Random ();
-            if (!this.IsPerfilCompleto ())
-            {
-                int indice = rnd.Next (this.preguntados.Length);
-                while (this.preguntados[indice] != 0)
-                {
-                    indice = rnd.Next (this.preguntados.Length);
-                }
-                switch (indice)
-                {
-                    case 0:
-                        ActualizarPreguntados (0);
-                        return TipoEnvio.Edad;
-
-                    case 1:
-                        ActualizarPreguntados (1);
-                        return TipoEnvio.Genero;
-
-                    case 2:
-                        ActualizarPreguntados (2);
-                        return TipoEnvio.PrecioMin;
-
-                    case 3:
-                        ActualizarPreguntados (3);
-                        return TipoEnvio.PrecioMax;
-
-                    case 4:
-                        ActualizarPreguntados (4);
-                        return TipoEnvio.Interes;
-                }
-            }
-            return TipoEnvio.Sugerencia;
+           return this.pregunta.GetSiguientePregunta();
         }
 
-        public bool IsPerfilCompleto ()
-        {
-            foreach (int item in preguntados)
-            {
-                if (item == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        public void ActualizarPreguntados (int indice)
-        {
-            this.ultimoPreguntado = indice;
-            this.preguntados[indice] = 1;
-        }
     }
 }

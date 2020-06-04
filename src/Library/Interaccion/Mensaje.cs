@@ -1,8 +1,18 @@
 using System.Collections.Generic;
 namespace Library
 {
+
+/// <summary>
+/// La clase Mensaje contiene todo lo correspondiente a los mensajes intercambiados con el usuario.
+/// Setea el tipo, obtiene las frases clave y si son frases nuevas las agrega.
+/// </summary>
     public class Mensaje
     {
+
+/// <summary>
+/// Aplicamos patrón Expert, ya que el dueño de los datos que es Mensaje setea todos los datos porque tiene toda la información
+/// disponible para ello y es su responsabilidad
+/// </summary>
         private string contenido;
         private TipoMensaje tipo;
         private List<string> frasesClave = new List<string>();

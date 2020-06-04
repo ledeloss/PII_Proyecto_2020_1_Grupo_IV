@@ -1,5 +1,8 @@
 namespace Library
 {
+/// <summary>
+/// TipoGeneraciones define todos los posibles valores de las generaciones que definimos acorde a la edad del usuario.
+/// </summary>
     public enum TipoGeneraciones
     {   //0 año
         RecienNacido,

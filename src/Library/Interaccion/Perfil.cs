@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Library
 {
+/// <summary>
+/// La clase Perfil se encarga de generar el perfil del usuario: su genero, edad, una lista de intereses, precio minimo y precio maximo.
+/// </summary>
     public class Perfil
     {
         private TipoGenero genero;
@@ -61,6 +64,7 @@ namespace Library
             {
                 if (value < this.PrecioMin || value <= 0)
                 {
+                    // No implementamos la excepcion pero entendemos que debemos arrojarla aqui.
                     throw new Exception ("Precio Incorrecto");
                 }
 
@@ -78,11 +82,12 @@ namespace Library
             {
                 if (value > this.PrecioMax || value < 0)
                 {
+                    // No implementamos la excepcion pero entendemos que debemos arrojarla aqui.
                     throw new Exception ("Precio Incorrecto");
                 }
 
                 this.precioMin = value;
-            } // generar excepcion
+            } 
         }
 
     }

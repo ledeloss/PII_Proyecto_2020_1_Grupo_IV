@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace Library
 {
+/// <summary>
+/// La clase Regalo tiene todos los atributos que necesitamos de un regalo
+/// </summary>
 
-    /* Clase que modela a los Regalos, tienen todos los atributos que necesitamos de un Regalo*/
     public class Regalo
     {
         public string Nombre
