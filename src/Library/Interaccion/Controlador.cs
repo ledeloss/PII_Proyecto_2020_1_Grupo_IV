@@ -4,7 +4,7 @@ namespace Library
 {
 
 /// <summary>
-/// Controlador : Esta e una clase compuesta  que permite mediante sus componentes (heredeados de ComponenteBase) manejar 
+/// Esta es una clase compuesta  que permite mediante sus componentes (heredeados de ComponenteBase) manejar 
 /// el flujo de los diferentes objetos involucrados (TaggerMensajes,Respuesta,GeneradorPerfil,etc) 
 /// 
 /// Decidimos utilizar el Patron Mediator para que la comunicacion entre las diferentes clases se presente de 
@@ -48,8 +48,7 @@ namespace Library
         }
 
 /// <summary>
-/// El método notificar recibe un mensaje y lo que hace dependiendo el tipo del mensaje, lo intenta clasificar
-/// notificando si dicho procesamiento fue exitoso o no.
+/// El método notificar recibe un mensaje y según su tipo continúa con el flujo de comunicación interna.
 /// </summary>
 /// <param name="mensaje"></param>
         public void Notificar (Mensaje mensaje)

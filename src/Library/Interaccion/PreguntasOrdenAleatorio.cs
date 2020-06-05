@@ -40,7 +40,8 @@ namespace Library
         protected int ultimoPreguntado = -1;
         /// <summary>
         /// Para definir cual es la siguiente pregunta a realizar, se realiza de forma Aleatoria
-        ///  pero con algunas consideraciones como ser: 
+        ///  pero con algunas consideraciones como ser:
+        ///  
         /// Cuando se pregunta aleatoria es alguno de los precios (Maximo o Minimo) la seguiente pregunta debe ser también de precio
         /// para que ambas preguntas estén siempre juntas.  
         /// </summary>
