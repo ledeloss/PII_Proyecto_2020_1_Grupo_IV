@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using NUnit.Framework;
 
 namespace Library.Test.GeneradorPerfil
@@ -86,4 +86,3 @@ namespace Library.Test.GeneradorPerfil
     }
 }
 
-*/

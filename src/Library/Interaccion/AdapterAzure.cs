@@ -18,6 +18,7 @@ namespace Library
         {
             
         }
+        
         public AdapterAzure(TextAnalyticsAzure cerebro)
         {
             this.azure = cerebro;
