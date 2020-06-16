@@ -11,10 +11,14 @@ namespace Library
 /// </summary>
     public class AdapterAzure: IProcesador
     {
-
-
         private IPlataforma plataforma;
-        private readonly TextAnalyticsAzure azure;
+        private readonly TextAnalyticsAzure azure = new TextAnalyticsAzure();
+
+        public AdapterAzure()
+        {
+            
+        }
+        
         public AdapterAzure(TextAnalyticsAzure cerebro)
         {
             this.azure = cerebro;

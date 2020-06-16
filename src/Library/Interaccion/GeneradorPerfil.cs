@@ -14,8 +14,12 @@ namespace Library
     /// </summary>
     public class GeneradorPerfil : ComponenteBase
     {
-        private IGeneradorPreguntas pregunta;
+        private IGeneradorPreguntas pregunta ;
         private Perfil persona = new Perfil ();
+        /// <summary>
+        ///  El Procesamiento de Preguntas se separa para cumplir SRP.
+        /// </summary>
+        /// <param name="generador"></param>
         public void SetGeneradorPreguntas (IGeneradorPreguntas generador)
         {
             this.pregunta = generador;
@@ -34,10 +38,10 @@ namespace Library
         /// <param name="stringEdad"></param>
         public void SetEdad (string stringEdad)
         {
-
+            int edad = 30;
             try
             {
-                int edad = Int32.Parse (stringEdad);
+                edad = Int32.Parse (stringEdad);
                 this.ValidarEdad (edad);
             }
             catch
@@ -168,10 +172,7 @@ namespace Library
 
             }
         }
-        /// <summary>
-        /// El Procesamiento de Preguntas se separa para que tenga unicamente dicha Responsabilidad aplicando SRP.
-        /// </summary>
-        /// <returns></returns>
+
         public TipoEnvio getDatoFaltante ()
         {
             return this.pregunta.GetSiguientePregunta ();
